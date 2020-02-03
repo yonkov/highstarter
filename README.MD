@@ -10,7 +10,9 @@ Kickstarter has just enough theme options to get you started. In fact, its theme
 - nested dropdown
 - static homepage
 - change theme accent colors, headings, links and buttons
-- choose between right sidebar layout and full-width layout without a sidebar
+- choose between right sidebar page layout or full-width layout
+- pagination
+- breadcrumbs
 - add custom widgets to right sidebar and footer
 - responsive design on tablets and mobile
 

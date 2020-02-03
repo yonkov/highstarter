@@ -12,7 +12,7 @@ Tags: blog, portfolio, photography, two-columns, right-sidebar, custom-colors, c
 
 == Description ==
 
-Extremely lightweight WordPress blog theme without any frameworks developed by Atanas Yonkov in 2020.
+Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny theme uses minimum resources to to provide maximum results and the best possible user experience. It has extensive documentation which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar layout or full-width. Option to use a static Homepage. Beautiful paralax header image. Option to add custom header image, custom header banner, custom site icon and change theme accent colors from the theme customizer. The theme supports nested dropdown sub menus. Simple breadcrumbs and pagination is also implemented. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
 == Installation ==
 
