@@ -13,7 +13,7 @@
 ?>
 
 
-<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'nasio' ); ?>">
+<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'kickstarter' ); ?>">
     <?php
 //Add content to the footer
 if ( is_active_sidebar( 'sidebar-2' ) && is_active_sidebar( 'sidebar-3' ) ) : ?>

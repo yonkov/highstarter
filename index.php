@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <h3 class="mb-4"><?php _e( 'Latest Posts', 'kickstart'); ?></h3>
+                    <h3 class="mb-4"><?php _e( 'Latest Posts', 'kickstarter'); ?></h3>
                 </div>
             </div>
             <div class="row blog-entries">
@@ -18,7 +18,7 @@
                         endwhile;
                     kickstarter_numeric_posts_nav();
                     else :
-                        _e( 'There are no posts!', 'nasio');                
+                        _e( 'There are no posts!', 'kickstarter');                
                     endif;
                     ?>
                     </div>

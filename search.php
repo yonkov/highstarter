@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <h2 class="mb-4"><?php _e('Search Results', 'nasio')?></h2>
+                    <h2 class="mb-4"><?php _e('Search Results', 'kickstarter')?></h2>
                 </div>
             </div>
             <div class="row blog-entries">
@@ -41,7 +41,7 @@
 
                 else : ?>
 
-                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'nasio' ); ?>
+                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kickstarter' ); ?>
                         </p>
                         <?php
                         get_search_form();

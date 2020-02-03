@@ -1,6 +1,6 @@
 /*
 Theme Name: Kickstarter
-Theme URI: http://yonkov.github.io/
+Theme URI: https://github.com/yonkov/kickstarter/
 Author: Atanas Yonkov
 Author URI: http://yonkov.github.io/
 Description: Kickstarter is a lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny theme uses minimum resources to to provide maximum results and the best possible user experience. It has extensive documentation which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all.
@@ -280,11 +280,14 @@ h6 {
 
 .site-logo-wrapper {
   float: left;
+  min-height: 92px;
 }
 
 .custom-logo {
   height: 92px;
   width: auto;
+  position: absolute;
+  padding: 8px;
 }
 
 .nav-links a {

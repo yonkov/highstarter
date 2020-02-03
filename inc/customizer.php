@@ -16,7 +16,7 @@ function kickstarter_register_theme_customizer($wp_customize) {
 
     $wp_customize->add_section('theme_options', array(
         'title' => __('Options', 'kickstarter'),
-        'description' => __( 'Change the layout of the whole website. You can choose to display or to hide the right sidebar.' )
+        'description' => __( 'Change the layout of the whole website. You can choose to display or to hide the right sidebar.', 'kickstarter' )
     ));
     $wp_customize->add_setting('page_layout', array(
         'default' => __('Right Sidebar', 'kickstarter'),
@@ -86,7 +86,7 @@ function kickstarter_customize_colors( $wp_customize ) {
 		'sanitize_callback' => 'wp_kses_post',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'site_title_textcolor', array(
-		'label'        => __( 'Site Title Color', 'nasio' ),
+		'label'        => __( 'Site Title Color', 'kickstarter' ),
         'section'    => 'colors',
 	) ) );
 
@@ -98,7 +98,7 @@ function kickstarter_customize_colors( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_textcolor', array(
-		'label'        => __( 'Links Color', 'nasio' ),
+		'label'        => __( 'Links Color', 'kickstarter' ),
         'section'    => 'colors',
     ) ) );
 
@@ -110,7 +110,7 @@ function kickstarter_customize_colors( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_textcolor', array(
-		'label'        => __( 'Headings Text Color', 'nasio' ),
+		'label'        => __( 'Headings Text Color', 'kickstarter' ),
         'section'    => 'colors',
     ) ) );
     
@@ -122,7 +122,7 @@ function kickstarter_customize_colors( $wp_customize ) {
     ) );
     
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'button_color', array(
-        'label'        => __( 'Buttons', 'nasio' ),
+        'label'        => __( 'Buttons', 'kickstarter' ),
         'section'    => 'colors',
     ) ) );
     
@@ -159,7 +159,7 @@ function kickstarter_customize_register_frontpage_banner( $wp_customize ) {
 
     $wp_customize->add_section('header_banner', array(
         'title' => __('Call to Action', 'kickstarter'),
-        'description' => __( 'Customize the Call to Action Button on the Header Image.' )
+        'description' => __( 'Customize the Call to Action Button on the Header Image.', 'kickstarter' )
     ));
 
     /** Banner Label */

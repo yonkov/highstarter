@@ -18,10 +18,10 @@ get_header(); ?>
     <div class="container">
         <div class="row blog-entries">
             <div class="col-md-12 col-lg-8 main-content">
-                <h2 class="mb-4"><?php _e( 'Oops! That page can&rsquo;t be found.', 'nasio' ); ?></h2>
+                <h2 class="mb-4"><?php _e( 'Oops! That page can&rsquo;t be found.', 'kickstarter' ); ?></h2>
 
                 <div class="row">
-                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'nasio' ); ?>
+                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'kickstarter' ); ?>
                     </p>
 
                     <?php get_search_form(); ?>

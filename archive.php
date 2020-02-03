@@ -47,7 +47,7 @@ get_header(); ?>
 
                 else : ?>
 
-                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'nasio' ); ?>
+                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kickstarter' ); ?>
                         </p>
                         <?php
                         get_search_form();
