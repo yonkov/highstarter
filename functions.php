@@ -377,7 +377,7 @@ function kickstarter_breadcrumbs() {
 // Add post navigation to previous and next post after post content 
 function  kickstarter_post_nav($args = array()) {
 
-    $defaults = (array) apply_filters( 'primer_post_nav_default_args', array(
+    $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
 		'prev_text' => '&larr; %title',
 		'next_text' => '%title &rarr;',
 	) );

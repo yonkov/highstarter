@@ -34,11 +34,11 @@ if ( ! function_exists( 'kickstarter_header_style' ) ) :
 	//Styles the header image and text displayed on the blog.
 	function kickstarter_header_style() {
 
-		$height            = get_theme_mod( 'header-background-height', '300' );
-		$repeat            = get_theme_mod( 'header-background-repeat', 'no-repeat' );
-		$size              = get_theme_mod( 'header-background-size', 'cover' );
-		$position          = get_theme_mod( 'header-background-position', 'center center' );
-		$attachment        = get_theme_mod( 'header-background-attachment', true ) ? 'fixed' : 'scroll';
+		$height = get_theme_mod( 'header-background-height', '300' );
+		$repeat = get_theme_mod( 'header-background-repeat', 'no-repeat' );
+		$size = get_theme_mod( 'header-background-size', 'cover' );
+		$position = get_theme_mod( 'header-background-position', 'center center' );
+		$attachment = get_theme_mod( 'header-background-attachment', true ) ? 'fixed' : 'scroll';
 
 		?>
 		<style type="text/css">
