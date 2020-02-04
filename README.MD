@@ -97,7 +97,7 @@ Other menu items that you may wish to add:
 
 ```<span class="dashicons dashicons-instagram"></span>```
 
-You can add as many social icons as you wish. For more information check Dashicons's documentation: https://developer.wordpress.org/resource/dashicons/#admin-collapse
+You can add as many social icons as you wish. For more information check Dashicons's documentation: https://developer.wordpress.org/resource/dashicons/
 
 ### Homepage Settings:
 Optionally specify a static front page.
