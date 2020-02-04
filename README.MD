@@ -65,7 +65,7 @@ In some cases, you may also decide that you want to change the height of the hea
 
 The call to action is the big orange button on the header of the homepage. You can change the url and the text of the header banner. You can also hide the button if you leave any of the two fields empty.
 
-## Layout
+### Layout
 
 Choose between page layout with right sidebar or full-width layout with a single click.
 
