@@ -16,7 +16,7 @@ Kickstarter has just enough theme options to get you started. In fact, its theme
 - add custom widgets to right sidebar and footer
 - responsive design on tablets and mobile
 
-If you want, you can customise Kickstarter beyond the included options. To do that, I strongly
+If you want to customise Kickstarter beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes).
 
 # Theme Documentation
 
