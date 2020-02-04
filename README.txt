@@ -42,9 +42,12 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Kickstarter bundles the following third-party resources:
+All the images are GPL released by the theme's author
 
-Dashicons
+Kickstarter uses Dashicons icon font, 
+the official icon font of the WordPress admin as of 3.8.
+License: GPL-2.0 (or later)
+Source: https://developer.wordpress.org/resource/dashicons/
 
 == Changelog ==
 

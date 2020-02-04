@@ -1,6 +1,6 @@
 Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks (only custom css), this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (less than 50KB zip file!) uses minimum resources to to provide maximum results and the best possible user experience. It features extensive documentation which makes it accessible and easy to set up not only by WordPress developers but also to people with little or no coding experience at all. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
-Kickstarter has just enough theme options to get you started. In fact, its theme customizer offers more options in the theme customizer than most of the other free themes in the market:
+Kickstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
 
 - custom header image with beautiful paralax effect
 - custom call to action button on homepage
@@ -18,9 +18,9 @@ Kickstarter has just enough theme options to get you started. In fact, its theme
 
 If you want, you can customise Kickstarter beyond the included options. To do that, I strongly
 
-## Theme Documentation
+# Theme Documentation
 
-### Installation
+## Installation
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Kickstarter in the search form and press the 'Enter' key on your keyboard.
