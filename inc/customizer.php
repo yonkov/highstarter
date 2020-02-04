@@ -15,7 +15,7 @@ add_action('customize_register', 'kickstarter_register_theme_customizer');
 function kickstarter_register_theme_customizer($wp_customize) {
 
     $wp_customize->add_section('theme_options', array(
-        'title' => __('Options', 'kickstarter'),
+        'title' => __('Layout', 'kickstarter'),
         'description' => __( 'Change the layout of the whole website. You can choose to display or to hide the right sidebar.', 'kickstarter' )
     ));
     $wp_customize->add_setting('page_layout', array(

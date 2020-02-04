@@ -96,6 +96,8 @@ add_action( 'wp_enqueue_scripts', 'kickstarter_styles' );
  */
 
 function kickstarter_fonts() { 
+    //Add dashicons
+    wp_enqueue_style( 'dashicons' );
     //Add google fonts 
     wp_enqueue_style( 'Merriweather', '//fonts.googleapis.com/css?family=Merriweather&display=swap' ); 
 	wp_enqueue_style( 'OpenSans', '//fonts.googleapis.com/css?family=Open+Sans' ); 
@@ -245,12 +247,6 @@ function kickstarter_numeric_posts_nav() {
  
 }
 
-// Add Dashicons in WordPress Front-end
-add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
-function load_dashicons_front_end() {
-  wp_enqueue_style( 'dashicons' );
-}
-
 function kickstarter_the_custom_logo() {
 
     if (function_exists('the_custom_logo') && has_custom_logo()) {
@@ -355,8 +351,9 @@ function kickstarter_post_meta_footer() {
 }
 
 // Add very simple breadcrumps
-function kickstarter_breadcrumbs() {
-    echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
+function kickstarter_breadcrumbs() { ?> 
+    <a href="<?php echo home_url();?>"><?php _e( 'Home', 'kickstarter' ); ?></a>
+    <?php
     if (is_category() || is_single()) {
         echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
         the_category(' &bull; ');
@@ -394,7 +391,7 @@ function kickstarter_call_to_action(){
         $banner_label = get_theme_mod('banner_label', __( 'Get Started', 'kickstarter' ));
         $banner_link = get_theme_mod( 'banner_link', '#' );
 
-        if ( $banner_label && $banner_link && has_header_image() ) : ?>
+        if ( $banner_label && $banner_link ) : ?>
             <p>
                 <a class="button" href="<?php echo esc_url($banner_link); ?>" 
                     aria-label="Continue reading"><?php echo esc_attr($banner_label); ?> &rarr;

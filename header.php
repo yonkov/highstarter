@@ -25,8 +25,9 @@
 </head>
 
 <body <?php body_class();?>>
-    <a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'kickstarter'); ?></a>
+<?php if ( function_exists( 'wp_body_open' ) ) { wp_body_open();} /*Since WordPress 5.2 */ ?>
     <header class="site-header">
+        <a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'kickstarter'); ?></a>
         <div class="site-header-wrapper">
             <div class="site-logo-wrapper">
             <?php // Insert logo through WP admin here
@@ -38,6 +39,5 @@
         </div><!-- .header wrapper -->
         <?php get_template_part('template-parts/header/site-branding');?>
     </header><!-- .site-header -->
-
-    <main class="site-content <?php echo $kickstarter_class; ?>">
+    <main class="site-content">
         <div class="wrapper">

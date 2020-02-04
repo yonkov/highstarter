@@ -49,6 +49,6 @@ Dashicons
 == Changelog ==
 
 = 1.0 =
-* Released: August, 2019
+* Released: February, 2020
 
 Initial release

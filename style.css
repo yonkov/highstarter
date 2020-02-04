@@ -512,14 +512,6 @@ code {
   }
 }
 
-/* Keyboard Navigation */
-
-ul li:hover > .sub-menu,
-ul li:focus > .sub-menu,
-ul li.highlight > .sub-menu {
- left: 100%;
-}
-
 .category-meta-field {
   display: inline-block;
   background: rgb(97, 219, 251);
@@ -754,9 +746,10 @@ ul li.highlight > .sub-menu {
     left: -999em;
     top: 0;
   }
-
+ /* Keyboard navigation */
   .main-navigation ul ul li:hover>ul,
-  .main-navigation ul ul li.focus>ul {
+  .main-navigation ul ul li.focus>ul,
+  .main-navigation ul ul li.highlight>ul {
     left: 100%;
   }
 
@@ -770,7 +763,8 @@ ul li.highlight > .sub-menu {
 }
 
 .main-navigation ul li:hover>ul,
-.main-navigation ul li.focus>ul {
+.main-navigation ul li.focus>ul,
+.main-navigation ul li.highlight>ul {
   left: auto;
   padding: 0;
 }
@@ -803,7 +797,8 @@ ul li.highlight > .sub-menu {
 }
 
 .main-navigation a:hover,
-.main-navigation a:visited:hover {
+.main-navigation a:visited:hover,
+.main-navigation a:focus {
   background-color: rgba(0, 0, 0, 0.1);
   color: #181818;
 }
@@ -857,15 +852,6 @@ ul li.highlight > .sub-menu {
   text-align: center;
 }
 
-.site-branding {
-  -moz-background-size: auto 50%;
-  -webkit-background-size: auto 50%;
-  -o-background-size: auto 50%;
-  background-size: auto 50%;
-  background-color: transparent;
-  background-attachment: fixed;
-}
-
 .hero-text {
   position: absolute;
   bottom: 1em;
@@ -885,7 +871,7 @@ ul li.highlight > .sub-menu {
 
 .image-overlay {
   background: rgba(0, 0, 0, .09);
-  min-height: 350px;
+  min-height: 420px;
 }
 
 /* Post loop */
@@ -1195,7 +1181,6 @@ img {
 }
 
 .sidebar-box {
-  margin-bottom: 4em;
   font-size: 15px;
   width: 100%;
   float: left;

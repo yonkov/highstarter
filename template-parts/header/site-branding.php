@@ -20,11 +20,11 @@
                     <?php bloginfo('name');?>
                 </a>
             </h1>
-    <?php $description = get_bloginfo('description', 'display');
+    <?php $kickstarter_description = get_bloginfo('description', 'display');
     
-    if ($description || is_customize_preview()): ?>
+    if ($kickstarter_description || is_customize_preview()): ?>
         <p class="site-description">
-            <?php echo $description; ?>
+            <?php echo $kickstarter_description; ?>
         </p>
         <!--Call to action-->
         <?php kickstarter_call_to_action() ?>
