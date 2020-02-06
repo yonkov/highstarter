@@ -47,7 +47,7 @@ To use the theme's customizer log in to your dashboard and navigate to Appearanc
 * **Site Icon** - you have the option to change the site icon in the browser tab (the tab icon at the top part of your browser)
 
 ### Header Image:
-Kickstarter supports the option to add custom header image via the theme customizer. Go to Appearance > Customize > Header Image and upload a header image from your PC. The recommended image size that works for me is 2500X750px. You have the options to crop the image (top, bottom or center) or to use the whole image (in this case it should center vertically). As a general recommendation, I would suggest to always compress the images that you upload, otherwise the site performace may deteriorate with time. Read more about that [here](https://rawinfopages.co.uk/squash-images-with-squoosh-to-improve-website-performance/).
+Kickstarter supports the option to add custom header image via the theme customizer. Go to Appearance > Customize > Header Image and upload a header image from your PC. The recommended image size is 2000X420px. You have the options to crop the image (top, bottom or center) or to use the whole image (in this case it should center vertically). As a general recommendation, I would suggest to always compress the images that you upload, otherwise the site performace may deteriorate with time. Read more about that [here](https://rawinfopages.co.uk/squash-images-with-squoosh-to-improve-website-performance/).
 
 When you scroll down in the same section from the theme customizer (Header Image), you will see that there are options to customize the header image. You can choose to change the image position, change the image height, display paralax effect and image overlay.
 
@@ -96,5 +96,9 @@ Optionally specify a static front page.
 This section is for more advanced users who want to write custom css to override the default theme's styles.
 
 If you want to customise Kickstarter beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes).
+
+# License
+
+* License: [GNU General Public License v2.0](http://www.gnu.org/licenses/gpl-2.0.html)
 
 Happy blogging!
