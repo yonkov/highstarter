@@ -8,7 +8,7 @@ Version: 1.0
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, portfolio, photography, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, custom-header, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
+Tags: portfolio, blog, one-column, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
@@ -30,7 +30,7 @@ You can read the Theme Instructions at https://github.com/yonkov/Kickstarter in 
 == Copyright ==
 
 Kickstarter WordPress Theme, Copyright 2020 Atanas Yonkov
-Kickstarter is distributed under the terms of the GNU GPL
+Kickstarter is distributed under the terms of the GNU GPLv2 or later
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
