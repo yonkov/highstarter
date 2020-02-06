@@ -20,11 +20,11 @@
  */
 function kickstarter_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'kickstarter_custom_header_args', array(
-        'default-text-color' => '000',
+		'default-image'      => 'assets/images/2500X750.jpg',
         'flex-width'         => true,
 		'flex-height'        => true,
-		'width'              => 1500,
-		'height'             => 380,
+		'width'              => 2000,
+		'height'             => 420,
 		'wp-head-callback'   => 'kickstarter_header_style',
 	) ) );
 }
@@ -32,17 +32,27 @@ add_action( 'after_setup_theme', 'kickstarter_custom_header_setup' );
 
 if ( ! function_exists( 'kickstarter_header_style' ) ) :
 	
-	//Styles the header image and text displayed on the blog.
+	//Styles the header image displayed on the blog.
 	function kickstarter_header_style() {
+		$height = get_theme_mod( 'header_image_height', '420px' );
 		$repeat = get_theme_mod( 'header-background-repeat', 'no-repeat' );
 		$size = get_theme_mod( 'header-background-size', 'cover' );
 		$position = get_theme_mod( 'header-background-position', 'center' );
-		$attachment = get_theme_mod( 'header-background-attachment', true ) ? 'fixed' : 'scroll';
-
+		$attachment = get_theme_mod( 'header-background-attachment', 1 )? 'fixed': 'scroll';
+		$overlay = get_theme_mod('header_image_overlay', 1);
 		?>
 		<style type="text/css">
 
-	<?php if ( has_header_image() ) : ?>
+		.image-overlay {
+			min-height: <?php echo esc_attr( $height ) ?>;
+		}
+		<?php if ($overlay) : ?>
+		.image-overlay {
+			background: rgba(0, 0, 0, .1);
+		}
+		<?php endif;
+
+		if ( has_header_image() ) : ?>
 		.site-branding {
 			background-image: url( <?php header_image(); ?> );
 			background-repeat: <?php echo esc_attr( $repeat ); ?>;
@@ -50,7 +60,7 @@ if ( ! function_exists( 'kickstarter_header_style' ) ) :
 			background-position: <?php echo esc_attr( $position ); ?>;
 			background-attachment: <?php echo esc_attr( $attachment ); ?>;
 		}
-	<?php endif; ?>
+		<?php endif; ?>
 
 	</style>
 	<?php

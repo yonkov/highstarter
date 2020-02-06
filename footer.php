@@ -13,7 +13,6 @@
  * @copyright  Copyright (c) 2020, Atanas Yonkov
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
-
 ?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">

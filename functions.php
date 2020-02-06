@@ -114,7 +114,6 @@ add_filter( 'post_thumbnail_html', 'kickstarter_remove_image_size_attributes' );
 // Remove image size attributes from images added to a WordPress post
 add_filter( 'image_send_to_editor', 'kickstarter_remove_image_size_attributes' );
 
-
 //Make drop down menu accessible by screen readers
 
 function kickstarter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
@@ -133,10 +132,10 @@ add_filter( 'nav_menu_link_attributes', 'kickstarter_nav_menu_link_attributes', 
 /* Modify comments markup*/
 
 function kickstarter_modify_comment_output( $comment, $depth, $args ) {
-	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
-	?>
-<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>"
+	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li'; ?>
+    <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>"
     <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent', $comment ); ?>>
+    
     <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
         <footer class="comment-meta">
             <div class="comment-author vcard">
@@ -148,7 +147,6 @@ function kickstarter_modify_comment_output( $comment, $depth, $args ) {
 				);
 				?>
             </div><!-- .comment-author -->
-
             <div class="comment-metadata">
                 <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
                     <time datetime="<?php comment_time( 'c' ); ?>">
@@ -164,18 +162,15 @@ function kickstarter_modify_comment_output( $comment, $depth, $args ) {
             <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'kickstarter' ); ?></p>
             <?php endif; ?>
         </footer><!-- .comment-meta -->
-
         <div class="comment-content">
             <?php comment_text(); ?>
         </div><!-- .comment-content -->
-
     </article><!-- .comment-body -->
+    
     <?php
 }
 
 wp_list_comments("callback=kickstarter_modify_comment_output");
-
-
 
 // IMPLEMENT SIMPLE PAGINATION
 function kickstarter_numeric_posts_nav() {
@@ -216,9 +211,8 @@ function kickstarter_numeric_posts_nav() {
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
         $class = 1 == $paged ? ' class="active"' : '';
- 
         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
- 
+
         if ( ! in_array( 2, $links ) )
             echo '<li>...</li>';
     }
@@ -244,7 +238,6 @@ function kickstarter_numeric_posts_nav() {
         printf( '<li>%s</li>' . "\n", get_next_posts_link('&#x00BB') );
  
     echo '</ul></div>' . "\n";
- 
 }
 
 function kickstarter_the_custom_logo() {
@@ -273,81 +266,62 @@ function kickstarter_the_posts_navigation()
         'prev_text' => __('Previous Post: <span>%title</span>', 'kickstarter'),
         'next_text' => __('Next Post: <span>%title</span>', 'kickstarter'),
     );
-
     the_post_navigation($args);
 }
 
 function kickstarter_thumbnail($size = '') {
 
     if (has_post_thumbnail()) {?>
-<div class="post-thumbnail">
-
-    <?php if (!is_single()): ?>
-    <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
-        <?php the_post_thumbnail(null, $size);?>
-    </a>
-    <?php else: ?>
-    <?php the_post_thumbnail(null, $size);?>
-    <?php endif;?>
-
-</div><!-- .post-thumbnail -->
-<?php
-}
+        <div class="post-thumbnail">
+            <?php if (!is_single()): ?>
+            <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
+                <?php the_post_thumbnail(null, $size);?>
+            </a>
+            <?php else: ?>
+            <?php the_post_thumbnail(null, $size);?>
+            <?php endif;?>
+        </div><!-- .post-thumbnail -->
+    <?php
+    }
 
 }
 //Display post meta data before and after post content
 function kickstarter_post_meta_header() {
 
     if (is_new_day()): ?>
-
         <span class="posted-date"><?php the_date();?></span>
-
-        <?php endif;?>
+    <?php endif;?>
 
         <span class="posted-author"><?php the_author_posts_link();?></span>
 
-        <?php if (!post_password_required() && (comments_open() || get_comments_number())): ?>
-
+    <?php if (!post_password_required() && (comments_open() || get_comments_number())): ?>
         <span class="comments-number">
-
             <?php comments_popup_link(esc_html__('Leave a comment', 'kickstarter'), esc_html__('1 Comment', 'kickstarter'), /* translators: number of comments */esc_html__('% Comments', 'kickstarter'), 'comments-link');?>
-
         </span>
-
-        <?php endif;?>
+    <?php endif;?>
+    
     <?php
 }
 
 function kickstarter_post_meta_footer() {
-
     if ('post' === get_post_type()): ?>
-
+    
     <?php $category_list = get_the_category_list( esc_html__(', ', 'kickstarter'));?>
+        <?php if ($category_list): ?>
+            <span class="cat-links">
+                <?php printf( /* translators: category list */esc_html__('%s', 'kickstarter'), $category_list); // xss ok. ?>
+            </span>
+        <?php endif;?>
 
-    <?php if ($category_list): ?>
+        <?php $tag_list = get_the_tag_list('', esc_html__(', ', 'kickstarter'));?>
 
-    <span class="cat-links">
-
-        <?php printf( /* translators: category list */esc_html__('%s', 'kickstarter'), $category_list); // xss ok. ?>
-
-    </span>
-
-    <?php endif;?>
-
-    <?php $tag_list = get_the_tag_list('', esc_html__(', ', 'kickstarter'));?>
-
-    <?php if ($tag_list): ?>
-
-    <span class="tags-links">
-
-        <?php printf( /* translators: tag list */esc_html__('%s', 'kickstarter'), $tag_list); // xss ok. ?>
-
-    </span>
-
-    <?php endif;?>
+        <?php if ($tag_list): ?>
+            <span class="tags-links">
+                <?php printf( /* translators: tag list */esc_html__('%s', 'kickstarter'), $tag_list); // xss ok. ?>
+            </span>
+        <?php endif;?>
 
     <?php endif;
-
 }
 
 // Add very simple breadcrumps
@@ -373,24 +347,19 @@ function kickstarter_breadcrumbs() { ?>
 }
 // Add post navigation to previous and next post after post content 
 function  kickstarter_post_nav($args = array()) {
-
     $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
 		'prev_text' => '&larr; %title',
 		'next_text' => '%title &rarr;',
 	) );
-
 	$args = wp_parse_args( $args, $defaults );
-
     the_post_navigation( $args );
-
 }
+
 //  Call to action html on homepage header
 function kickstarter_call_to_action(){
     if( is_front_page() || is_home() ) :
-
         $banner_label = get_theme_mod('banner_label', __( 'Get Started', 'kickstarter' ));
         $banner_link = get_theme_mod( 'banner_link', '#' );
-
         if ( $banner_label && $banner_link ) : ?>
             <p>
                 <a class="button" href="<?php echo esc_url($banner_link); ?>" 
@@ -398,7 +367,5 @@ function kickstarter_call_to_action(){
                 </a>
             </p>
         <?php endif;
-
     endif;
-
 }

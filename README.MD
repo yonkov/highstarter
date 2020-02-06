@@ -1,20 +1,25 @@
-Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks (only custom css), this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (less than 50KB zip file!) uses minimum resources to to provide maximum results and the best possible user experience. It features extensive documentation which makes it accessible and easy to set up not only by WordPress developers but also to people with little or no coding experience at all. Fully compatible with Gutenberg but also supports the good old Classic editor.
+Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks (only custom css), this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (less than 30KB zip file excluding the header image and the screenshot!) uses minimum resources to to provide maximum results and the best possible user experience. It features extensive documentation which makes it accessible and easy to set up not only by WordPress developers but also to people with little or no coding experience at all. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
 Kickstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
 
-- custom header image with beautiful paralax effect
+- custom header image
+- options to change header image height and position
+- options to add image overlay and parallax effect to the header image
 - custom call to action button on homepage
 - custom logo
 - custom site icon
 - custom menu
-- nested dropdown
+- nested dropdown submenus
 - static homepage
 - change theme accent colors, headings, links and buttons
 - choose between beautiful right sidebar page layout or full-width layout
-- pagination
-- breadcrumbs
+- beautiful pagination
+- simple breadcrumbs
 - add custom widgets to right sidebar and footer
 - responsive design on tablets and mobile
+- translation ready
+- beginner-frinedly
+- developer-friendly
 
 If you want to customise Kickstarter beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes).
 
@@ -41,31 +46,15 @@ To use the theme's customizer log in to your dashboard and navigate to Appearanc
 * **Site Icon** - you have the option to change the site icon in the browser tab (the tab icon at the top part of your browser)
 
 ### Header Image:
-Kickstarter supports the option to add custom header image via the theme customizer. Go to Appearance > Customize > Header Image and upload a header image from your PC. The recommended image size that works for me is 2500X900px. You have the options to crop the image (top, bottom or center) or to use the whole image (in this case it should center vertically). As a general recommendation, I would suggest to always compress the images that you upload, otherwise the site performace may deteriorate with time. Read more about that [here](https://rawinfopages.co.uk/squash-images-with-squoosh-to-improve-website-performance/).
+Kickstarter supports the option to add custom header image via the theme customizer. Go to Appearance > Customize > Header Image and upload a header image from your PC. The recommended image size that works for me is 2500X750px. You have the options to crop the image (top, bottom or center) or to use the whole image (in this case it should center vertically). As a general recommendation, I would suggest to always compress the images that you upload, otherwise the site performace may deteriorate with time. Read more about that [here](https://rawinfopages.co.uk/squash-images-with-squoosh-to-improve-website-performance/).
 
-The header image comes with a beautiful paralax effect, however, in some situations you may want to get rid of it. In this case you can use the following css snippet(paste the following code in appearance > customize > additional css):
-
-    .site-header .site-branding {
-        background-attachment: scroll;
-    }
-
-The header image also has a dark overlay that you may also want to remove. In this case, add the following css code again in appearance > customize > additional css:
-
-    .site-header .image-overlay {
-        background: transparent;
-    }
-
-In some cases, you may also decide that you want to change the height of the header. Use the following code to change the header image height to 600px:
-
-    .site-header .image-overlay {
-        min-height: 600px;
-    }
+When you scroll down in the same section from the theme customizer (Header Image), you will see that there are options to customize the header image. You can choose to change the image position, change the image height, display paralax effect and image overlay.
 
 ### Call to Action Banner
 
-The call to action is the big orange button on the header of the homepage. You can change the url and the text of the header banner. You can also hide the button if you leave any of the two fields empty.
+The call to action is the big orange button on the header of the homepage. You can change the url and the text of the header banner from the Call to Action section in the theme customizer. You can also hide the button if you leave any of the two fields empty.
 
-### Layout
+### Page Layout
 
 Choose between page layout with right sidebar or full-width layout with a single click.
 

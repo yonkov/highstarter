@@ -9,7 +9,7 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Tags: blog, portfolio, photography, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
+Tags: portfolio, blog, one-column, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
 Text Domain: kickstarter
 
 This theme, like WordPress, is licensed under the GPL.
@@ -825,6 +825,12 @@ code {
   }
 }
 
+.site-header-wrapper {
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+
 /* Clear Fix */
 
 .navigation:before,
@@ -867,11 +873,6 @@ code {
   .hero-text .site-title a {
     font-size: 35px;
   }
-}
-
-.image-overlay {
-  background: rgba(0, 0, 0, .09);
-  min-height: 420px;
 }
 
 /* Post loop */
