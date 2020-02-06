@@ -20,7 +20,7 @@
  */
 function kickstarter_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'kickstarter_custom_header_args', array(
-		'default-image'      => 'assets/images/2500X750.jpg',
+		'default-image'      => get_template_directory_uri() . '/assets/images/2500X750.jpg',
         'flex-width'         => true,
 		'flex-height'        => true,
 		'width'              => 2000,

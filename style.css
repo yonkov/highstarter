@@ -846,7 +846,7 @@ code {
   clear: both;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 600px) and (max-width: 992px) {
   .site-section {
     display: inline-block;
   }
@@ -890,6 +890,7 @@ code {
     margin: 0 0 1.5em;
     padding: 2.5em 3.375em;
     background-color: #ffffff;
+    width: 100%;
   }
 
   article,
