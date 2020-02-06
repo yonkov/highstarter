@@ -8,7 +8,7 @@ Version: 1.0
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: portfolio, blog, one-column, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
+Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
@@ -52,6 +52,10 @@ License: GPL-2.0 (or later)
 Source: https://developer.wordpress.org/resource/dashicons/
 
 == Changelog ==
+
+= 1.1 =
+* Fix responsive layout css issues
+Released: February, 2020
 
 = 1.0 =
 * Released: February, 2020
