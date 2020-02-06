@@ -21,7 +21,7 @@ Kickstarter has just enough theme options to get you started. In fact, its theme
 - add custom widgets to right sidebar and footer
 - responsive design on tablets and mobile
 - translation ready
-- beginner-frinedly
+- beginner-friendly
 - developer-friendly
 
 # Theme Documentation
