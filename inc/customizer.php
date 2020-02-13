@@ -83,23 +83,19 @@ body h3 {
     color: #<?php echo esc_attr(get_theme_mod('header_textcolor', "#333"));
     ?>;
 }
-
 body a {
     color: <?php echo esc_attr(get_theme_mod('link_textcolor', '007bff'));
     ?>;
 }
-
 .site-header-wrapper {
     background-color: <?php echo esc_attr(get_theme_mod('header_background_color', "#fff"));
     ?>;
 }
-
 .hero-text .site-title a,
 .hero-text p {
     color: <?php echo esc_attr(get_theme_mod('site_title_textcolor', "#fff"));
     ?>;
 }
-
 button,
 a.button,
 a.button:visited,

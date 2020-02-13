@@ -258,12 +258,13 @@ else{ //Prior WP 4.7
 }
 
 //Post navigation after post content
-function kickstarter_the_posts_navigation()
-{
+function kickstarter_the_posts_navigation() {
+
     $args = array(
-        'prev_text' => __('Previous Post: <span>%title</span>', 'kickstarter'),
-        'next_text' => __('Next Post: <span>%title</span>', 'kickstarter'),
+        'prev_text' => __('Previous Post: ', 'kickstarter') . '<span>%title</span>',
+        'next_text' => __('Next Post: ', 'kickstarter') . '<span>%title</span>',    
     );
+
     the_post_navigation($args);
 }
 
@@ -304,18 +305,18 @@ function kickstarter_post_meta_header() {
 function kickstarter_post_meta_footer() {
     if ('post' === get_post_type()): ?>
     
-    <?php $category_list = get_the_category_list( esc_html__(', ', 'kickstarter'));?>
+    <?php $category_list = get_the_category_list(esc_html(', '));?>
         <?php if ($category_list): ?>
             <span class="cat-links">
-                <?php printf( /* translators: category list */esc_html__('%s', 'kickstarter'), $category_list); // xss ok. ?>
+                <?php printf( /* category list */esc_html('%s'), $category_list); // xss ok. ?>
             </span>
         <?php endif;?>
 
-        <?php $tag_list = get_the_tag_list('', esc_html__(', ', 'kickstarter'));?>
+        <?php $tag_list = get_the_tag_list('', esc_html(', '));?>
 
         <?php if ($tag_list): ?>
             <span class="tags-links">
-                <?php printf( /* translators: tag list */esc_html__('%s', 'kickstarter'), $tag_list); // xss ok. ?>
+                <?php printf( /* tag list */esc_html('%s'), $tag_list); // xss ok. ?>
             </span>
         <?php endif;?>
 
