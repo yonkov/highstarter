@@ -2,11 +2,7 @@
 /**
  * Sample implementation of the Custom Header feature
  *
- * You can add an optional custom header image to header.php like so ...
- * <?php the_header_image_tag(); ?>
- *
  * @link       https://developer.wordpress.org/themes/functionality/custom-headers/
- *
  * @package WordPress
  * @subpackage Kickstarter
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -34,21 +30,24 @@ if ( ! function_exists( 'kickstarter_header_style' ) ) :
 	
 	//Styles the header image displayed on the blog.
 	function kickstarter_header_style() {
-		$height = get_theme_mod( 'header_image_height', '420px' );
+		$height = get_theme_mod( 'header_image_height', '380' );
 		$repeat = get_theme_mod( 'header-background-repeat', 'no-repeat' );
 		$size = get_theme_mod( 'header-background-size', 'cover' );
 		$position = get_theme_mod( 'header-background-position', 'center' );
 		$attachment = get_theme_mod( 'header-background-attachment', 1 )? 'fixed': 'scroll';
 		$overlay = get_theme_mod('header_image_overlay', 1);
+		// Get the opacity of the color overlay.
+		$color_overlay_opacity  = get_theme_mod( 'cover_template_overlay_opacity' );
+		//$color_overlay_opacity  = ( false === $color_overlay_opacity ) ? 1 : $color_overlay_opacity;
 		?>
 		<style type="text/css">
 
 		.image-overlay {
-			min-height: <?php echo esc_attr( $height ) ?>;
+			min-height: <?php echo esc_attr( $height ) ?>px;
 		}
 		<?php if ($overlay) : ?>
 		.image-overlay {
-			background: rgba(0, 0, 0, .1);
+			background: rgba(0, 0, 0, .<?php echo esc_attr($color_overlay_opacity); ?>);
 		}
 		<?php endif;
 
@@ -61,7 +60,6 @@ if ( ! function_exists( 'kickstarter_header_style' ) ) :
 			background-attachment: <?php echo esc_attr( $attachment ); ?>;
 		}
 		<?php endif; ?>
-
 	</style>
 	<?php
 	}

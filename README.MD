@@ -1,6 +1,5 @@
 # Kickstarter
-
-Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (less than 30KB zip file excluding the header image and the screenshot!) uses minimum resources to provide maximum results and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Fully compatible with Gutenberg but also supports the good old Classic editor.
+Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (30KB zip file excluding the header image and the screenshot!) uses minimum resources to provide maximum results and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
 Kickstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
 
@@ -28,7 +27,6 @@ Kickstarter has just enough theme options to get you started. In fact, its theme
 # Theme Documentation
 
 ## Installation
-
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Kickstarter in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
@@ -53,19 +51,15 @@ Kickstarter supports the option to add custom header image via the theme customi
 When you scroll down in the same section from the theme customizer (Header Image), you will see that there are options to customize the header image. You can choose to change the image position, change the image height, display paralax effect and image overlay.
 
 ### Call to Action Banner
-
 The call to action is the big orange button on the header of the homepage. You can change the url and the text of the header banner from the Call to Action section in the theme customizer. You can also hide the button if you leave any of the two fields empty.
 
 ### Page Layout
-
 Choose between page layout with right sidebar or full-width layout with a single click.
 
 ### Colors: 
-
 Change theme colors such as the header, the headings,the links, the buttons and the primary menu text.
 
 ### Widgets
-
 Widgets are something very useful if you want to display dynamic info such as latest posts, latest comments or post archives on the website. Kickstarter theme supports two places to add widgets, the right sidebar and the footer. If you have chosen full-width layout, you will be able to add widgets in the footer only. This theme works best if you add just one widget in "Footer 1" and two widgets in "Footer 2". In the "Right Sidebar" widget you can add as many widgets as you want.
 
 ### Menus:
@@ -99,7 +93,6 @@ This section is for more advanced users who want to write custom css to override
 If you want to customise Kickstarter beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes).
 
 # License
-
 * License: [GNU General Public License v2.0](http://www.gnu.org/licenses/gpl-2.0.html)
 
 Happy blogging!

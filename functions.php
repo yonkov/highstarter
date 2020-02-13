@@ -115,10 +115,8 @@ add_filter( 'post_thumbnail_html', 'kickstarter_remove_image_size_attributes' );
 add_filter( 'image_send_to_editor', 'kickstarter_remove_image_size_attributes' );
 
 //Make drop down menu accessible by screen readers
-
 function kickstarter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
-
-    // Add [aria-haspopup] and [aria-expanded] to menu items that have children
+// Add [aria-haspopup] and [aria-expanded] to menu items that have children
     $item_has_children = in_array( 'menu-item-has-children', $item->classes );
     if ( $item_has_children ) {
         $atts['aria-haspopup'] = "true";
@@ -355,7 +353,7 @@ function  kickstarter_post_nav($args = array()) {
     the_post_navigation( $args );
 }
 
-//  Call to action html on homepage header
+//  Call to action button on homepage
 function kickstarter_call_to_action(){
     if( is_front_page() || is_home() ) :
         $banner_label = get_theme_mod('banner_label', __( 'Get Started', 'kickstarter' ));

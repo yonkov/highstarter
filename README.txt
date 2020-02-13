@@ -4,15 +4,15 @@ Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.3
 Requires PHP: 5.2.4
-Version: 1.1
-Stable tag: 1.1
+Version: 1.11
+Stable tag: 1.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
-Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny theme uses minimum resources to to provide maximum results and the best possible user experience. It has extensive documentation which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar layout or full-width. Option to use a static Homepage. Beautiful paralax header image. Option to add custom header image, custom header banner, custom site icon and change theme accent colors from the theme customizer. The theme supports nested dropdown sub menus. Simple breadcrumbs and pagination is also implemented. Fully compatible with Gutenberg but also supports the good old Classic editor.
+Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (30KB zip file excluding the header image and the screenshot!) uses minimum resources to provide maximum results and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
 == Installation ==
 
@@ -44,7 +44,12 @@ GNU General Public License for more details.
 
 == Resources ==
 
-1. All the images in the theme are GPL released by the theme's author
+1. The header image in the theme is GPL released by the theme's author
+License: CC0 1.0 Universal (CC0 1.0)
+
+2. Screenshot post image, Copyright Suzy Hazelwood
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/XQVNNEFHWD
 
 2. Kickstarter uses Dashicons icon font, 
 the official icon font of the WordPress admin as of 3.8.
@@ -52,6 +57,10 @@ License: GPL-2.0 (or later)
 Source: https://developer.wordpress.org/resource/dashicons/
 
 == Changelog ==
+
+= 1.11 =
+* Improve theme customizer and documentation
+Released: February, 2020
 
 = 1.1 =
 * Fix responsive layout css issues
