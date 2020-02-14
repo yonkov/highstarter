@@ -18,7 +18,7 @@
 get_header(); ?>
 <div>
     <!-- Start of main-content -->
-    <section class="site-section py-sm">
+    <section class="site-section">
         <div class="container">
             <div class="row">
                 <div class="column<?php echo (is_sticky()) ?  ' sticky' : ''; ?>">
@@ -29,7 +29,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="row blog-entries">
-                <div class="col-md-12 col-lg-8 main-content">
+                <div class="main-content">
                     <div>
                         <?php
                 if ( have_posts() ) :

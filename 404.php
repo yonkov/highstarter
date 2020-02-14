@@ -14,10 +14,10 @@
 
 get_header(); ?>
 
-<section class="site-section py-sm">
+<section class="site-section">
     <div class="container">
         <div class="row blog-entries">
-            <div class="col-md-12 col-lg-8 main-content">
+            <div class="main-content">
                 <h2 class="mb-4"><?php _e( 'Oops! That page can&rsquo;t be found.', 'kickstarter' ); ?></h2>
 
                 <div class="row">

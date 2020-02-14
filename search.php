@@ -14,7 +14,7 @@
 <?php get_header(); ?>
 <div>
     <!-- Start of main-content -->
-    <section class="site-section py-sm">
+    <section class="site-section">
         <div class="container">
             <div class="row">
                 <div class="column">

@@ -228,8 +228,8 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
     $wp_customize->add_setting(
         'header_image_height',
         array(
-            'default' => '380',
-            'sanitize_callback' => 'absint',
+            'default' => '380px',
+            'sanitize_callback' => 'sanitize_text_field',
         )
     );
 
@@ -238,7 +238,7 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
         array(
             'label' => esc_html__('Header Image Height', 'kickstarter'),
             'section' => 'header_options',
-            'type' => 'number',
+            'type' => 'text',
             'description' => esc_html__('Change the height of the header image. Write below a number in pixels (default is 380px).', 'kickstarter'),
         )
     );
@@ -269,7 +269,7 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
         return apply_filters(
             'kickstarter_customize_opacity_range',
             array(
-                'min' => 1,
+                'min' => 0,
                 'max' => 9,
                 'step' => 1,
             )
@@ -279,7 +279,7 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
     $wp_customize->add_setting(
         'cover_template_overlay_opacity',
         array(
-            'default' => 1,
+            'default' => '1',
             'sanitize_callback' => 'absint',
         )
     );
@@ -327,9 +327,9 @@ function kickstarter_register_theme_customizer($wp_customize) {
             'choices' => array(
                 'one' => esc_html__('Right Sidebar', 'kickstarter'),
                 'two' => esc_html__('Full-width', 'kickstarter'),
-            ),
+                ),
+            )
         )
-    )
     );
 }
 
