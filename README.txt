@@ -4,8 +4,8 @@ Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.3
 Requires PHP: 5.2.4
-Version: 1.12
-Stable tag: 1.12
+Version: 1.13
+Stable tag: 1.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -57,6 +57,10 @@ License: GPL-2.0 (or later)
 Source: https://developer.wordpress.org/resource/dashicons/
 
 == Changelog ==
+
+= 1.12 =
+* Sticky post visualization
+Released: February, 2020
 
 = 1.11 =
 * Improve theme customizer and documentation

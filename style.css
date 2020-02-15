@@ -4,7 +4,7 @@ Theme URI: https://github.com/yonkov/kickstarter/
 Author: Atanas Yonkov
 Author URI: http://yonkov.github.io/
 Description: Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (30KB zip file excluding the header image and the screenshot!) uses minimum resources to provide maximum results and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
-Version: 1.12
+Version: 1.13
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -127,8 +127,11 @@ a img.aligncenter {
   padding: 5px;
 }
 
-.sticky .blog-entry {
-  border: 3px solid rgb(97, 219, 251);
+.sticky h2.entry-title::before {
+  content: '\f109';
+  font-family: dashicons;
+  padding-right: 10px;
+  font-size: 22px;
 }
 
 /* Theme default styles */
@@ -224,6 +227,7 @@ blockquote {
 
 .breadcrumb {
   padding-bottom: .45em;
+  word-wrap: break-word;
   text-align: left;
 }
 

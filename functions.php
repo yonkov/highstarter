@@ -1,8 +1,6 @@
 <?php
 
 function kickstarter_setup() {
-    // Make theme available for translation. 
-	load_theme_textdomain( 'kickstarter', get_template_directory() . '/languages');
     // Let WordPress manage the document title.
     add_theme_support( 'title-tag' );
     //Enable support for Post Thumbnails on posts and pages.
