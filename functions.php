@@ -82,9 +82,9 @@ add_action( 'widgets_init', 'kickstarter_widgets_init' );
  */
 function kickstarter_styles() {
 	//Theme Navigation 
-	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ),'',true);
+	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(),'',true);
 	//Theme stylesheet.
-    wp_enqueue_style( 'kickstarter-css', get_template_directory_uri() . '/style.css', '', '1.0.0' );
+    wp_enqueue_style( 'kickstarter-css', get_template_directory_uri() . '/style.css', '', '1.0.1' );
 }
 
 add_action( 'wp_enqueue_scripts', 'kickstarter_styles' );
@@ -124,6 +124,21 @@ function kickstarter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 }
 add_filter( 'nav_menu_link_attributes', 'kickstarter_nav_menu_link_attributes', 10, 4 );
 
+//Filter Classes of wp_list_pages items to match menu items
+
+function kickstarter_filter_menu_item_classes( $css_class) {
+	// Add current menu item class.
+	if ( in_array( 'current_page_item', $css_class, true ) ) {
+		$css_class[] = 'current-menu-item';
+	}
+	// Add menu item has children class.
+	if ( in_array( 'page_item_has_children', $css_class, true ) ) {
+		$css_class[] = 'menu-item-has-children';
+    }
+	return $css_class;
+}
+
+add_filter( 'page_css_class', 'kickstarter_filter_menu_item_classes', 10, 5 );
 
 /* Modify comments markup*/
 
