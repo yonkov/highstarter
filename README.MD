@@ -1,5 +1,5 @@
 # Kickstarter
-Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any frameworks, this makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (30KB zip file excluding the header image and the screenshot!) uses minimum resources to provide maximum results and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
+Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any libraries or frameworks - only custom css and vanilla js. This makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 30KB zip file excluding the header image and the screenshot) uses minimum resources to provide maximum results and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
 Kickstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
 
@@ -23,6 +23,7 @@ Kickstarter has just enough theme options to get you started. In fact, its theme
 - translation ready
 - beginner-friendly
 - developer-friendly
+- -lightweight
 
 # Theme Documentation
 
