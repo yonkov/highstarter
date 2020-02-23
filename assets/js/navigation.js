@@ -1,3 +1,13 @@
+// Nodelist forEach polyfill IE9+, Edge and Safari
+if (typeof NodeList.prototype.forEach !== 'function')  {
+	NodeList.prototype.forEach = Array.prototype.forEach;
+}
+// Element.matches() polyfill IE 9+
+if (!Element.prototype.matches) {
+	Element.prototype.matches = Element.prototype.msMatchesSelector ||
+	Element.prototype.webkitMatchesSelector;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 	//Mobile navigation
 	var menuToggle = document.getElementById( 'menu-toggle' ),
@@ -6,16 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		menuToggle.classList.toggle( 'open' );
 		navMenu.classList.toggle( 'open' );
 	};
-	
+
 	//Keyboard navigation
 	var getParents = function (elem, selector) {
-		// Element.matches() polyfill IE 9+
-		if (!Element.prototype.matches) {
-			Element.prototype.matches = Element.prototype.msMatchesSelector ||
-			Element.prototype.webkitMatchesSelector;
-		}
 		// recursively go up the DOM adding matches to the parents array
-		var parents = [];  
+		var parents = [];
 		while (elem && (elem = elem.parentNode) !== document) {
 			if (selector) {
 				if (elem.matches(selector)) {

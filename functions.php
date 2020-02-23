@@ -184,6 +184,7 @@ function kickstarter_modify_comment_output( $comment, $depth, $args ) {
 wp_list_comments("callback=kickstarter_modify_comment_output");
 
 // IMPLEMENT SIMPLE PAGINATION
+
 function kickstarter_numeric_posts_nav() {
  
     if( is_singular() )
@@ -249,7 +250,7 @@ function kickstarter_numeric_posts_nav() {
         printf( '<li>%s</li>' . "\n", get_next_posts_link('&#x00BB') );
  
     echo '</ul></div>' . "\n";
-}
+} 
 
 function kickstarter_the_custom_logo() {
 

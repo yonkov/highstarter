@@ -53,8 +53,8 @@ get_header(); ?>
                         get_search_form();
 
                 endif;
-                ?>
-
+                kickstarter_numeric_posts_nav(); //Pagination
+                ?>       
                     </div>
                 </div>
                 <!-- END of main-content -->
