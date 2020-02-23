@@ -23,7 +23,7 @@ Kickstarter has just enough theme options to get you started. In fact, its theme
 - translation ready
 - beginner-friendly
 - developer-friendly
-- -lightweight
+- lightweight
 
 # Theme Documentation
 

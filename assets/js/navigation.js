@@ -8,14 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	};
 	
 	//Keyboard navigation
-
 	var getParents = function (elem, selector) {
 		// Element.matches() polyfill IE 9+
 		if (!Element.prototype.matches) {
 			Element.prototype.matches = Element.prototype.msMatchesSelector ||
 			Element.prototype.webkitMatchesSelector;
 		}
-		//Get all parent li elements
+		// recursively go up the DOM adding matches to the parents array
 		var parents = [];  
 		while (elem && (elem = elem.parentNode) !== document) {
 			if (selector) {
@@ -31,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	var toggleHighlight = function () {
 		var parents = getParents(this, 'li');
 		parents.forEach(function(el){
+			//toggle highlight class on the parent li items that remain focused
 			el.classList.toggle("highlight");
 		});
 	};
-	//Toggle highlight class on focus
 	document.querySelectorAll('ul .menu-item-has-children a').forEach(function(el) {
 		el.addEventListener("focus", toggleHighlight)
 	});
