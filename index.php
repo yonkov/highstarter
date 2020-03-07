@@ -3,8 +3,8 @@
     <section id="content" class="site-section">
         <div class="container">
             <div class="row">
-                <div class="column">
-                    <h3 class="mb-4"><?php _e( 'Latest Posts', 'kickstarter'); ?></h3>
+                <div class="post-title">
+                    <h3><?php _e( 'Posts', 'kickstarter'); ?></h3>
                 </div>
             </div>
             <div class="row blog-entries">

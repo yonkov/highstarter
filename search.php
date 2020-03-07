@@ -17,13 +17,13 @@
     <section class="site-section">
         <div class="container">
             <div class="row">
-                <div class="column">
-                    <h2 class="mb-4"><?php _e('Search Results', 'kickstarter')?></h2>
+                <div class="post-title">
+                    <h2><?php _e('Search Results', 'kickstarter')?></h2>
                 </div>
             </div>
             <div class="row blog-entries">
                 <div class="main-content">
-                    <div>
+                    <div class="row">
                         <?php
                 if ( have_posts() ) :
                     /* Start the Loop */

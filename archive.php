@@ -21,16 +21,16 @@ get_header(); ?>
     <section class="site-section">
         <div class="container">
             <div class="row">
-                <div class="column<?php echo (is_sticky()) ?  ' sticky' : ''; ?>">
+                <div class="post-title">
                     <?php
-				the_archive_title( '<h2 class="mb-4">', '</h1>' );
+				the_archive_title( '<h2>', '</h2>' );
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
                 </div>
             </div>
             <div class="row blog-entries">
                 <div class="main-content">
-                    <div>
+                    <div class="row">
                         <?php
                 if ( have_posts() ) :
                     /* Start the Loop */

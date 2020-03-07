@@ -3,8 +3,8 @@ Theme Name: Kickstarter
 Theme URI: https://github.com/yonkov/kickstarter/
 Author: Atanas Yonkov
 Author URI: http://yonkov.github.io/
-Description: Kickstarter is a super lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. This makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 30KB zip file excluding the header image and the screenshot) uses custom css and vanilla javascript to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
-Version: 1.17
+Description: Kickstarter is a super lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. This makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 30KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
+Version: 1.18
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -196,9 +196,8 @@ p {
   margin-bottom: 1rem
 }
 
-dl, ol, ul {
-  margin-top: 0;
-  margin-bottom: 1rem
+ul {
+  padding-left:15px;
 }
 
 blockquote {
@@ -259,7 +258,7 @@ h6 {
   min-height: 92px;
 }
 
-@media only screen and (min-width: 40em){
+@media (min-width: 40em){
   .site-logo-wrapper{
     width: 5em;
   }
@@ -379,6 +378,10 @@ label {
   padding-left: 15px
 }
 
+.sidebar-box > ul {
+  padding-left: 0
+}
+
 @media (min-width: 992px) {
   .sidebar-wrapper {
     -ms-flex: 0 0 33.333333%;
@@ -438,7 +441,7 @@ pre, code {
 
 /* Mobile menu */
 
-@media only screen and (min-width: 40.063em) {
+@media (min-width: 40.063em) {
   .menu-toggle {
     display: none;
   }
@@ -498,7 +501,7 @@ pre, code {
   width: 100%;
 }
 
-@media only screen and (max-width: 40em) {
+@media (max-width: 40em) {
   .main-navigation-container {
     float: none;
     clear: both;
@@ -513,7 +516,7 @@ pre, code {
   position: relative;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media (min-width: 40.063em) {
   .main-navigation {
     display: table;
     margin: 0 auto;
@@ -539,7 +542,7 @@ pre, code {
   clear: both;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media (min-width: 40.063em) {
   .main-navigation.open {
     background-color: transparent;
   }
@@ -550,33 +553,23 @@ pre, code {
   position: relative;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media (min-width: 40.063em) {
   .main-navigation .menu-main-menu-container {
     float: left;
     margin-left: 25px;
-  }
-  .main-navigation li li {
-    text-indent: .8rem;
-  }
-}
-
-@media only screen and (max-width: 40.062em){
-  .main-navigation li li {
-    text-indent: 1.5rem;
-  }
-  
-  .main-navigation li li li {
-    text-indent: 2.25rem;
   }
 }
 
 .main-navigation ul {
   list-style: none;
   margin: 0;
-  padding-left: 0;
 }
 
-@media only screen and (max-width: 40em) {
+.main-navigation > ul {
+  padding-left: 0
+}
+
+@media (max-width: 40em) {
   .main-navigation ul .open>.sub-menu {
     display: block;
   }
@@ -587,7 +580,7 @@ pre, code {
   background-color: white;
 }
 
-@media only screen and (max-width: 40em) {
+@media (max-width: 40em) {
   .main-navigation ul ul {
     display: none;
   }
@@ -597,7 +590,7 @@ pre, code {
   display: block;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media (min-width: 40.063em) {
   .main-navigation ul ul {
     position: absolute;
     left: -999em;
@@ -633,7 +626,7 @@ pre, code {
   padding: 0;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media (min-width: 40.063em) {
   .main-navigation li {
     position: relative;
     float: left;
@@ -647,7 +640,7 @@ pre, code {
   border-bottom: transparent 2px solid;
 }
 
-@media only screen and (max-width: 40em) {
+@media (max-width: 40em) {
   .main-navigation a {
     padding-top: 1.2em;
     padding-bottom: 1.2em;
@@ -692,7 +685,7 @@ pre, code {
   border-bottom: 4px solid transparent
 }
 
-@media only screen and (min-width: 40.063em) {
+@media (min-width: 40.063em) {
 
   .main-navigation .menu-item-has-children>a::after,
   .main-navigation .sub-menu .menu-item-has-children>a::after {
@@ -721,7 +714,7 @@ pre, code {
   clear: both;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media (min-width: 600px) and (max-width: 992px) {
   .site-section {
     display: inline-block;
   }
@@ -752,16 +745,14 @@ pre, code {
 
 /* Post loop */
 
-.hentry, .comments-area, .widget, #page>.page-title-container {
-  background-color: #ffffff;
+.hentry {
+  background-color: #fff;
 }
 
 @media (min-width: 40.063em) {
   .hentry {
-    min-width: 40em;
     margin: 0 0 1.5em;
     padding: 2.5em 3.375em;
-    background-color: #ffffff;
     width: 100%;
   }
 
@@ -894,7 +885,7 @@ input[type="submit"]:hover {
 /* Sidebar */
 
 .sidebar {
-  padding-left: 0 !important;
+  padding-left: 0;
 }
 
 .sidebar-box {
@@ -910,8 +901,13 @@ input[type="submit"]:hover {
 
 /* Homepage */
 
-.mb-4 {
-  margin-bottom: 1.5rem !important
+.post-title {
+  margin-bottom: 1.5rem;
+  padding-left: 15px
+}
+
+.post-title p {
+  margin: 0;
 }
 
 .home .search-form .form-group #s,
@@ -926,10 +922,6 @@ input[type="submit"]:hover {
 
 img {
   max-width: 100%;
-}
-
-.sidebar {
-  padding-left: 5em;
 }
 
 @media (max-width: 991.98px) {
@@ -960,7 +952,7 @@ img {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.sidebar-box ul {
+.site-footer section > ul, .site-footer section div > ul {
   padding-left: 0em;
 }
 
@@ -994,7 +986,6 @@ form#commentform,
 }
 
 #commentform {
-  background-color: #f8f9fa !important;
   padding: 3rem;
 }
 
@@ -1094,13 +1085,6 @@ form#commentform,
   top: 49%;
 }
 
-@media (min-width: 1025px) {
-  .widget-column.footer-widget-2>section:first-child {
-    min-width: 250px;
-    margin-right: calc(2.5vw + 10px);
-  }
-}
-
 .page-item.active .page-link {
 
   z-index: 1;
@@ -1190,11 +1174,6 @@ textarea.form-control {
   height: inherit;
 }
 
-.element-animate {
-  opacity: 0;
-  visibility: visible;
-}
-
 .post .wp-post-image {
   max-width: 100%;
   max-height: 100%;
@@ -1213,11 +1192,17 @@ textarea.form-control {
   padding-bottom: 10px;
 }
 
+@media (max-width: 991px){
+  .main-content{
+    padding-bottom: 1.5em;
+  }
+}
+
 @media (min-width: 992px) {
   .main-content {
-    -ms-flex: 0 0 66.666667%;
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%
+    -ms-flex: 0 0 66.667%;
+    flex: 0 0 66.667%;
+    max-width: 66.667%
   }
 }
 
@@ -1227,7 +1212,6 @@ textarea.form-control {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  text-align: justify;
 }
 
 .main-content h2, .main-content h1 {
@@ -1306,7 +1290,6 @@ section[id*="recent-comments"] h2 {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 1em 0 0.1em;
   background: #262626;
   color: #999999;
 }
@@ -1338,7 +1321,6 @@ section[id*="recent-comments"] h2 {
 .site-footer h3,
 .site-footer h2 {
   color: #fff;
-  margin-bottom: 30px;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: .2em;
@@ -1366,8 +1348,8 @@ section[id*="recent-comments"] h2 {
 }
 
 @media screen and (max-width: 993px) {
-  .widget-column.footer-widget-2 section {
-    padding-top: 20px;
+  .widget-column section {
+    padding: 15px;
   }
 }
 
@@ -1377,13 +1359,10 @@ section[id*="recent-comments"] h2 {
 
 @media (min-width: 994px) {
   .site-footer .widget-column {
-    padding-top: 4em;
+    padding: 0 15px 0
   }
-}
-
-@media screen and (max-width: 898px) {
-  .row .d-md-none {
-    display: block !important;
+  .site-footer .widget-column section {
+    padding-top: 3em;
   }
 }
 
@@ -1398,15 +1377,23 @@ section[id*="recent-comments"] h2 {
 @media (min-width: 992.98px) {
   .widget-area {
     display: flex;
+    width: 100%;
   }
 
   .widget-column {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+  }
+
+  .widget-column.footer-widget-1 section {
     width: 100%;
   }
 
-  .sidebar-box .footer-widget-2 {
-    display: flex;
+  .widget-column.footer-widget-2 section {
+    width: 42%;
   }
 }
 
@@ -1414,6 +1401,10 @@ section[id*="recent-comments"] h2 {
 .navigation {
   flex: 100%;
   margin: 1em 0;
+}
+
+.navigation ul {
+  padding-left: 10px
 }
 
 .navigation li a,
@@ -1432,9 +1423,12 @@ section[id*="recent-comments"] h2 {
   font-size: 14px;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 375px) {
   .navigation ul li a {
     font-size: 12px;
+  }
+  .navigation ul {
+    padding-left: 0px;
   }
 }
 
@@ -1442,13 +1436,18 @@ section[id*="recent-comments"] h2 {
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-  background-color: rgba(0, 123, 255, .7);
-  border-radius: 10px;
+  display: inline-block;
+  border-radius: 2px;
   cursor: pointer;
   padding: .6rem;
+  height: 30px;
+  margin: 0 3px;
+  padding: 2px 11px;
+  color:#fff;
+  background-color: rgba(255, 102, 99, .6);
 }
 
 .navigation li a:hover,
 .navigation li.active a {
-  background-color: rgba(0, 123, 255, .95);
+  background-color: rgb(255, 102, 99);
 }
