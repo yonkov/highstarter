@@ -4,8 +4,8 @@ Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.3
 Requires PHP: 5.2.4
-Version: 1.18
-Stable tag: 1.18
+Version: 1.19
+Stable tag: 1.19
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -57,6 +57,10 @@ License: GPL-2.0 (or later)
 Source: https://developer.wordpress.org/resource/dashicons/
 
 == Changelog ==
+
+= 1.19 =
+* Improve mobile menu and pagination
+Released: March, 2020
 
 = 1.18 =
 * Add multiple footer widgets
