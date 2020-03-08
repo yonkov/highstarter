@@ -250,7 +250,9 @@ function kickstarter_numeric_posts_nav() {
         printf( '<li>%s</li>' . "\n", get_next_posts_link('&#x00BB') );
  
     echo '</ul></div>' . "\n";
-} 
+
+}
+
 
 function kickstarter_the_custom_logo() {
 
@@ -298,6 +300,7 @@ function kickstarter_thumbnail($size = '') {
     }
 
 }
+
 //Display post meta data before and after post content
 function kickstarter_post_meta_header() {
 
@@ -358,6 +361,7 @@ function kickstarter_breadcrumbs() { ?>
         echo '</em>"';
     }
 }
+
 // Add post navigation to previous and next post after post content 
 function  kickstarter_post_nav($args = array()) {
     $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
