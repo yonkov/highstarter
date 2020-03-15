@@ -1,3 +1,23 @@
+Theme documentation for the Kickstarter theme.
+
+Table of Contents
+- [Kickstarter](#kickstarter)
+- [Theme Documentation](#theme-documentation)
+  - [Installation](#installation)
+  - [Theme Options](#theme-options)
+    - [Site identity:](#site-identity)
+    - [Header Image:](#header-image)
+    - [Call to Action Banner](#call-to-action-banner)
+    - [Page Layout](#page-layout)
+    - [Colors:](#colors)
+    - [Widgets](#widgets)
+    - [Menus:](#menus)
+    - [Homepage Settings:](#homepage-settings)
+    - [Additional CSS:](#additional-css)
+- [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # Kickstarter
 Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2020. It doesn't use any libraries or frameworks - only custom css and vanilla js. This makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 30KB zip file excluding the header image and the screenshot) uses minimum resources to provide maximum results and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
 

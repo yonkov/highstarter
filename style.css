@@ -4,7 +4,7 @@ Theme URI: https://github.com/yonkov/kickstarter/
 Author: Atanas Yonkov
 Author URI: http://yonkov.github.io/
 Description: Kickstarter is a super lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. This makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 30KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
-Version: 1.19
+Version: 1.2.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -324,7 +324,6 @@ label {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-right: 15px;
   }
 }
 
@@ -523,9 +522,6 @@ pre, code {
   }
 }
 
-.main-navigation .menu-main-menu-container>ul>li:last-of-type>a {
-  padding-right: 2em;
-}
 
 .main-navigation.open {
   display: block;
@@ -548,16 +544,8 @@ pre, code {
   }
 }
 
-
 .main-navigation .menu-item-has-children {
   position: relative;
-}
-
-@media (min-width: 40.063em) {
-  .main-navigation .menu-main-menu-container {
-    float: left;
-    margin-left: 25px;
-  }
 }
 
 .main-navigation ul {
@@ -906,10 +894,6 @@ input[type="submit"]:hover {
 
 /* Sidebar */
 
-.sidebar {
-  padding-left: 0;
-}
-
 .sidebar-box {
   margin: 0 0 1.5em;
   padding: 1.675em 1.675em;
@@ -941,11 +925,6 @@ input[type="submit"]:hover {
 .home .search-form .form-group #s,
 .site-footer .search-form .form-group #s {
   margin-top: -30px;
-}
-
-.home .search-form .icon {
-  top: 49%;
-  right: 5px;
 }
 
 img {
@@ -1098,19 +1077,6 @@ form#commentform,
   background: #f7f7f7;
   padding: 15px 15px;
   border: none;
-}
-
-.search-form .icon {
-  position: absolute;
-  top: 71%;
-  right: 5px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.site-footer .search-form .icon {
-  top: 49%;
 }
 
 .page-item.active .page-link {
@@ -1291,10 +1257,7 @@ section[id*="recent-comments"] h2 {
   color: rgb(108, 117, 125);
 }
 
-.search-form .icon {
-  border: unset;
-  background: transparent !important;
-}
+
 
 /* Single post Comments */
 

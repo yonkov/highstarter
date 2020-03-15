@@ -1,0 +1,157 @@
+body {
+    text-align: right;
+    direction: rtl;
+    unicode-bidi: embed
+}
+
+/* WordPress default styles */
+
+.alignright {
+    float: left;
+    margin: 5px 20px 20px 0
+}
+
+.alignleft {
+    float: right;
+    margin: 5px 0 20px 20px
+}
+
+a img.alignright {
+    float: left;
+    margin: 5px 20px 20px 0
+}
+
+a img.alignleft {
+    float: right;
+    margin: 5px 0 20px 20px
+}
+
+.wp-caption.alignnone {
+    margin: 5px 0 20px 20px
+}
+
+.wp-caption.alignleft {
+    margin: 5px 0 20px 20px
+}
+
+.wp-caption.alignright {
+    margin: 5px 20px 20px 0
+}
+
+/* Theme default styles */
+
+ul {
+    padding-right: 15px;
+}
+
+blockquote {
+    border-right: 5px solid rgba(121, 121, 253, 0.5);
+    border-left: none;
+}
+
+.breadcrumb {
+    text-align: right;
+}
+
+.site-logo-wrapper {
+    float: right;
+}
+
+.sidebar-box>ul {
+    padding-right: 0
+}
+
+.nav-previous,
+.post-navigation .nav-previous {
+    float: right;
+}
+
+.nav-next,
+.post-navigation .nav-next {
+    float: left;
+    text-align: left;
+}
+
+/* Menu */
+
+@media (min-width: 40.063em) {
+    .main-navigation .sub-menu {
+        padding-right: 0px;
+        text-align: right
+    }
+
+    .main-navigation ul {
+        left: 999em
+    }
+
+    .main-navigation ul ul {
+        left: 999em
+    }
+
+    .main-navigation ul ul ul {
+        left: 999em;
+    }
+
+    .main-navigation li:hover>ul,
+    .main-navigation li.focus>ul,
+    .main-navigation li.show>ul {
+        left: auto;
+    }
+    /* Keyboard navigation */
+    .main-navigation ul ul li:hover>ul,
+    .main-navigation ul ul li.focus>ul,
+    .main-navigation ul ul li.highlight>ul {
+        left: auto;
+        right: 100%;
+    }
+}
+
+/* Mobile menu */
+
+.menu-toggle {
+    left: 0;
+    right: auto;
+    padding: 0 0 24px 9px;
+}
+
+/* Add arrows for menu items that has children menu items */
+
+.main-navigation .menu-item-has-children>a::after {
+    left: 4px;
+    right: 0;
+  }
+  
+  .main-navigation .sub-menu .menu-item-has-children>a::after {
+    top: 50%;
+    left: 10px;
+    right: auto;
+    border-right: 4px solid #181818;
+    border-left: none;
+  }
+
+  /* Homepage */
+  .post-title {
+    padding-right: 15px
+  }
+
+  .site-footer section > ul, .site-footer section div > ul {
+    padding-right: 0em;
+  }
+
+  .comment-list li .vcard img {
+    margin-left: 5px;
+  }
+
+  .comment-list .children {
+    float: right;
+    padding: 50px 40px 0 0px;
+  }
+  
+  .comment-list li {
+    float: right;
+  }
+
+  /* Headings */
+  .main-content h2, .main-content h1 {
+    text-align: right;
+  }

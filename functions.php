@@ -84,7 +84,7 @@ function kickstarter_styles() {
 	//Theme Navigation 
 	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(),'',true);
 	//Theme stylesheet.
-    wp_enqueue_style( 'kickstarter-css', get_template_directory_uri() . '/style.css', '', '1.0.1' );
+    wp_enqueue_style( 'kickstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.1' );
 }
 
 add_action( 'wp_enqueue_scripts', 'kickstarter_styles' );
@@ -341,8 +341,14 @@ function kickstarter_post_meta_footer() {
 }
 
 // Add very simple breadcrumps
-function kickstarter_breadcrumbs() { ?> 
+function kickstarter_breadcrumbs() { 
+    
+    if( is_front_page() )
+    
+    return; ?> 
+    
     <a href="<?php echo home_url();?>"><?php _e( 'Home', 'kickstarter' ); ?></a>
+    
     <?php
     if (is_category() || is_single()) {
         echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
