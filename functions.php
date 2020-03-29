@@ -82,12 +82,14 @@ add_action( 'widgets_init', 'kickstarter_widgets_init' );
  */
 function kickstarter_styles() {
 	//Theme Navigation 
-	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(),'',true);
+    wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(),'',true);
+    //Toggle Dark Theme Mode
+    wp_enqueue_script( 'dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(),'',true);
 	//Theme stylesheet.
     wp_enqueue_style( 'kickstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.1' );
 }
 
-add_action( 'wp_enqueue_scripts', 'kickstarter_styles' );
+add_action( 'wp_enqueue_scripts', 'kickstarter_styles', 99 );
 
 /**
  * Enqueue fonts to the footer for better peformance
@@ -144,9 +146,9 @@ add_filter( 'page_css_class', 'kickstarter_filter_menu_item_classes', 10, 5 );
 
 function kickstarter_modify_comment_output( $comment, $depth, $args ) {
 	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li'; ?>
-    <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>"
+<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>"
     <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent', $comment ); ?>>
-    
+
     <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
         <footer class="comment-meta">
             <div class="comment-author vcard">
@@ -170,14 +172,15 @@ function kickstarter_modify_comment_output( $comment, $depth, $args ) {
             </div><!-- .comment-metadata -->
 
             <?php if ( '0' == $comment->comment_approved ) : ?>
-            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'kickstarter' ); ?></p>
+            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'kickstarter' ); ?>
+            </p>
             <?php endif; ?>
         </footer><!-- .comment-meta -->
         <div class="comment-content">
             <?php comment_text(); ?>
         </div><!-- .comment-content -->
     </article><!-- .comment-body -->
-    
+
     <?php
 }
 
@@ -287,15 +290,15 @@ function kickstarter_the_posts_navigation() {
 function kickstarter_thumbnail($size = '') {
 
     if (has_post_thumbnail()) {?>
-        <div class="post-thumbnail">
-            <?php if (!is_single()): ?>
-            <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
-                <?php the_post_thumbnail(null, $size);?>
-            </a>
-            <?php else: ?>
+    <div class="post-thumbnail">
+        <?php if (!is_single()): ?>
+        <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
             <?php the_post_thumbnail(null, $size);?>
-            <?php endif;?>
-        </div><!-- .post-thumbnail -->
+        </a>
+        <?php else: ?>
+        <?php the_post_thumbnail(null, $size);?>
+        <?php endif;?>
+    </div><!-- .post-thumbnail -->
     <?php
     }
 
@@ -305,37 +308,37 @@ function kickstarter_thumbnail($size = '') {
 function kickstarter_post_meta_header() {
 
     if (is_new_day()): ?>
-        <span class="posted-date"><?php the_date();?></span>
+    <span class="posted-date"><?php the_date();?></span>
     <?php endif;?>
 
-        <span class="posted-author"><?php the_author_posts_link();?></span>
+    <span class="posted-author"><?php the_author_posts_link();?></span>
 
     <?php if (!post_password_required() && (comments_open() || get_comments_number())): ?>
-        <span class="comments-number">
-            <?php comments_popup_link(esc_html__('Leave a comment', 'kickstarter'), esc_html__('1 Comment', 'kickstarter'), /* translators: number of comments */esc_html__('% Comments', 'kickstarter'), 'comments-link');?>
-        </span>
+    <span class="comments-number">
+        <?php comments_popup_link(esc_html__('Leave a comment', 'kickstarter'), esc_html__('1 Comment', 'kickstarter'), /* translators: number of comments */esc_html__('% Comments', 'kickstarter'), 'comments-link');?>
+    </span>
     <?php endif;?>
-    
+
     <?php
 }
 
 function kickstarter_post_meta_footer() {
     if ('post' === get_post_type()): ?>
-    
+
     <?php $category_list = get_the_category_list(esc_html(', '));?>
-        <?php if ($category_list): ?>
-            <span class="cat-links">
-                <?php printf( /* category list */esc_html('%s'), $category_list); // xss ok. ?>
-            </span>
-        <?php endif;?>
+    <?php if ($category_list): ?>
+    <span class="cat-links">
+        <?php printf( /* category list */esc_html('%s'), $category_list); // xss ok. ?>
+    </span>
+    <?php endif;?>
 
-        <?php $tag_list = get_the_tag_list('', esc_html(', '));?>
+    <?php $tag_list = get_the_tag_list('', esc_html(', '));?>
 
-        <?php if ($tag_list): ?>
-            <span class="tags-links">
-                <?php printf( /* tag list */esc_html('%s'), $tag_list); // xss ok. ?>
-            </span>
-        <?php endif;?>
+    <?php if ($tag_list): ?>
+    <span class="tags-links">
+        <?php printf( /* tag list */esc_html('%s'), $tag_list); // xss ok. ?>
+    </span>
+    <?php endif;?>
 
     <?php endif;
 }
@@ -345,10 +348,10 @@ function kickstarter_breadcrumbs() {
     
     if( is_front_page() )
     
-    return; ?> 
-    
+    return; ?>
+
     <a href="<?php echo home_url();?>"><?php _e( 'Home', 'kickstarter' ); ?></a>
-    
+
     <?php
     if (is_category() || is_single()) {
         echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
@@ -366,29 +369,78 @@ function kickstarter_breadcrumbs() {
         echo the_search_query();
         echo '</em>"';
     }
+
 }
 
 // Add post navigation to previous and next post after post content 
 function  kickstarter_post_nav($args = array()) {
-    $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
-		'prev_text' => '&larr; %title',
-		'next_text' => '%title &rarr;',
-	) );
-	$args = wp_parse_args( $args, $defaults );
-    the_post_navigation( $args );
+    if(!is_rtl()){
+        $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
+            'prev_text' => '&larr; %title',
+            'next_text' => '%title &rarr;',
+            
+        ) );
+        $args = wp_parse_args( $args, $defaults );
+        the_post_navigation( $args );
+
+    }
+
+    else{
+
+        $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
+            'prev_text' => '%title &larr;',
+            'next_text' => '&rarr; %title',
+            
+        ) );
+        $args = wp_parse_args( $args, $defaults );
+        the_post_navigation( $args );
+
+    }
 }
 
 //  Call to action button on homepage
 function kickstarter_call_to_action(){
+    
     if( is_front_page() || is_home() ) :
+        
         $banner_label = get_theme_mod('banner_label', __( 'Get Started', 'kickstarter' ));
         $banner_link = get_theme_mod( 'banner_link', '#' );
+        
         if ( $banner_label && $banner_link ) : ?>
-            <p>
-                <a class="button" href="<?php echo esc_url($banner_link); ?>" 
-                    aria-label="Continue reading"><?php echo esc_attr($banner_label); ?> &rarr;
-                </a>
-            </p>
+    
+        <p>
+            <a class="button" 
+                href="<?php echo esc_url($banner_link); ?>" 
+                aria-label="<?php printf( /* translators: continue reading */ esc_attr__( 'Continue Reading', 'kickstarter' ) ); ?>">
+                <?php printf( /* translators: right arrow (LTR) / left arrow (RTL) */ $banner_label . ' ' . '%s', is_rtl() ? '&larr;' : '&rarr;' ); ?>
+            </a>
+        </p>
+
         <?php endif;
+    
     endif;
 }
+
+/**
+ * Enable dark theme mode
+ * 
+ * Adapted from https://wordpress.org/plugins/wp-night-mode/
+ * 
+ */
+
+function kickstarter_dark_mode($classes) {
+
+    $kickstarter_night_mode = isset( $_COOKIE['kickstarterNightMode'] ) ? $_COOKIE['kickstarterNightMode'] : '';
+
+    if ($kickstarter_night_mode!=='' ) {
+        
+        // Add 'dark-mode' body class
+            return array_merge( $classes, array( 'dark-mode' ) );
+
+    }
+
+    return $classes;
+  
+}
+
+add_filter( 'body_class', 'kickstarter_dark_mode');

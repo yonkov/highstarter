@@ -19,6 +19,12 @@ require get_template_directory() . '/inc/sanitization-functions.php';
 
 function kickstarter_customize_colors($wp_customize) {
 
+    $wp_customize->add_section('colors', array(
+        'title' => esc_html__('Colors', 'kickstarter'),
+        'description' => esc_html__('Customze the colors of the light theme mode. To customize the dark theme mode, you need to add custom css in the the additional css tab. For more information, please refer to the theme documentation.', 'kickstarter'),
+        'priority' => 99,
+    ));
+
     //Primary menu background color
     $wp_customize->add_setting('header_background_color', array(
         'default' => '#fff',
@@ -103,7 +109,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     background-color: <?php echo esc_attr(get_theme_mod('button_color', "#ff6663"));
-    ?>;
+    ?> !important;
 }
 </style>
 <?php
