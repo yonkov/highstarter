@@ -4,8 +4,8 @@ Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.3
 Requires PHP: 5.2.4
-Version: 1.23
-Stable tag: 1.23
+Version: 1.24
+Stable tag: 1.24
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready

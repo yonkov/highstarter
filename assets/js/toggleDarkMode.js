@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			cookieStorage.setCookie('kickstarterNightMode', 'true', 2628000000, '/');
 		} else {
 			body.classList.remove('dark-mode');
-			setTimeout(() => {
+			setTimeout(function(){
 				cookieStorage.removeCookie('kickstarterNightMode');
 			}, 100);
 		}
