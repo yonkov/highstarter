@@ -19,6 +19,7 @@ Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2
 
 Kickstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
 
+- light and dark theme mode
 - custom header image
 - options to change header image height and position
 - options to add image overlay and parallax effect to the header image
