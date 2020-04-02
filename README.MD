@@ -6,16 +6,16 @@ Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2
 - [Theme Documentation](#theme-documentation)
   - [Installation](#installation)
   - [Theme Options](#theme-options)
-    - [Site identity:](#site-identity)
-    - [Header Image:](#header-image)
-    - [Call to Action Banner](#call-to-action-banner)
+    - [Site identity](#site-identity)
+    - [Header Image](#header-image)
+    - [Call to Action](#call-to-action)
     - [Page Layout](#page-layout)
-    - [Colors:](#colors)
+    - [Colors](#colors)
     - [Widgets](#widgets)
-    - [Menus:](#menus)
-    - [Homepage Settings:](#homepage-settings)
-    - [Night Mode](#night-mode)
-    - [Additional CSS:](#additional-css)
+    - [Menus](#menus)
+    - [Homepage Settings](#homepage-settings)
+    - [Dark Mode](#dark-mode)
+    - [Additional CSS](#additional-css)
 - [License](#license)
 
 Kickstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
@@ -56,7 +56,7 @@ Use the theme customizer to customize the theme to taste. There are just enough 
 
 To use the theme's customizer log in to your dashboard and navigate to Appearance > Customize. You can also access the customizer directly from the admin bar on the top of the page.
 
-### Site identity:
+### Site identity
 
 * **Upload logo** - you have the option to upload custom logo that will display in the site's header. 
 
@@ -64,25 +64,24 @@ To use the theme's customizer log in to your dashboard and navigate to Appearanc
 
 * **Site Icon** - you have the option to change the site icon in the browser tab (the tab icon at the top part of your browser)
 
-### Header Image:
+### Header Image
 Kickstarter supports the option to add custom header image via the theme customizer. Go to Appearance > Customize > Header Image and upload a header image from your PC. The recommended image size is 2000X420px. You have the options to crop the image (top, bottom or center) or to use the whole image (in this case it should center vertically). As a general recommendation, I would suggest to always compress the images that you upload, otherwise the site performace may deteriorate with time. Read more about that [here](https://rawinfopages.co.uk/squash-images-with-squoosh-to-improve-website-performance/).
 
 When you scroll down in the same section from the theme customizer (Header Image), you will see that there are options to customize the header image. You can choose to change the image position, change the image height, display paralax effect and image overlay.
 
-### Call to Action Banner
-The call to action is the big orange button on the header of the homepage. You can change the url and the text of the header banner from the Call to Action section in the theme customizer. You can also hide the button if you leave any of the two fields empty.
+### Call to Action
+The call to action banner is the big orange button on the header of the homepage. You can change the url and the text of the header banner from the Call to Action section in the theme customizer. You can also hide the button if you leave any of the two fields empty.
 
 ### Page Layout
 Choose between page layout with right sidebar or full-width layout with a single click.
 
-### Colors: 
+### Colors
 Change theme colors such as the header, the headings,the links, the buttons and the primary menu text.
 
 ### Widgets
 Widgets are something very useful if you want to display dynamic info such as latest posts, latest comments or post archives on the website. Kickstarter theme supports two places to add widgets, the right sidebar and the footer. If you have chosen full-width layout, you will be able to add widgets in the footer only. This theme works best if you add just one widget in "Footer 1" and two widgets in "Footer 2". In the "Right Sidebar" widget you can add as many widgets as you want.
 
-### Menus:
-
+### Menus
 This theme supports two menu locations - Top menu and Social Links Menu. 
 
 * **Top Menu** - You can create the primary menu from the theme customizer or you can also go to dashboard > menu. Click on create menu and give it a name, then drag or add the pages you want to it. After that, from the menu locations section, select Top Menu checkbox. This theme supports as many sub-menus as you want.
@@ -103,18 +102,17 @@ Other menu items that you may wish to add:
 
 You can add as many social icons as you wish. For more information check Dashicons's documentation: https://developer.wordpress.org/resource/dashicons/
 
-### Homepage Settings:
+### Homepage Settings
 Optionally specify a static front page.
 
-### Night Mode
-
+### Dark Mode
 Protect your visitor's eyes and help them spend more time on your website by allowing them to switch between day and night mode (light and dark layout). To change to dark mode, you need to click on the toggle button in the theme footer. You can also change the background color and add custom css to change the main colors of the night mode. For example, if you want to change the link colors, you can use the following css:
 
     body.dark-mode a {
 	    color: rgba(102, 222, 209, .8) !important;
     }
 
-### Additional CSS:
+### Additional CSS
 This section is for more advanced users who want to write custom css to override the default theme's styles.
 
 If you want to customise Kickstarter beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes).
