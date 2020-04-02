@@ -2,10 +2,10 @@
 Contributors: nravota12
 Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
-Tested up to: WordPress 5.3
+Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 1.24
-Stable tag: 1.24
+Version: 1.25
+Stable tag: 1.25
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -51,12 +51,32 @@ License: CC0 1.0 Universal (CC0 1.0)
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/XQVNNEFHWD
 
-2. Kickstarter uses Dashicons icon font, 
+3. Kickstarter uses Dashicons icon font, 
 the official icon font of the WordPress admin as of 3.8.
 License: GPL-2.0 (or later)
 Source: https://developer.wordpress.org/resource/dashicons/
 
+== Attribution ==
+
+1. The theme uses code from WP Night Mode plugin by Marko Arula
+https://wordpress.org/plugins/wp-night-mode/,
+(C) 2019-2020 Marko Arula
+License: GNU General Public License v2 or later
+
+2. Theme structure is inspired by Twenty Seventeen 
+https://wordpress.org/themes/twentyseventeen/,
+(C) 2017-2020 Automattic, Inc.
+License: GNU General Public License v2 or later
+
 == Changelog ==
+
+= 1.25 =
+* Update docs and attribution
+Released: March, 2020
+
+= 1.24 =
+* IE 11 Backwards Compatibility
+Released: March, 2020
 
 = 1.23 =
 * Dark Theme Mode

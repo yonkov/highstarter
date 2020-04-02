@@ -14,6 +14,7 @@ Kickstarter is a super lightweight starter theme developed by Atanas Yonkov in 2
     - [Widgets](#widgets)
     - [Menus:](#menus)
     - [Homepage Settings:](#homepage-settings)
+    - [Night Mode](#night-mode)
     - [Additional CSS:](#additional-css)
 - [License](#license)
 
@@ -104,6 +105,14 @@ You can add as many social icons as you wish. For more information check Dashico
 
 ### Homepage Settings:
 Optionally specify a static front page.
+
+### Night Mode
+
+Protect your visitor's eyes and help them spend more time on your website by allowing them to switch between day and night mode (light and dark layout). To change to dark mode, you need to click on the toggle button in the theme footer. You can also change the background color and add custom css to change the main colors of the night mode. For example, if you want to change the link colors, you can use the following css:
+
+    body.dark-mode a {
+	    color: rgba(102, 222, 209, .8) !important;
+    }
 
 ### Additional CSS:
 This section is for more advanced users who want to write custom css to override the default theme's styles.
