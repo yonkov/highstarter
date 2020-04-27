@@ -6,8 +6,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov

@@ -1,7 +1,7 @@
 <?php 
 
 //select sanitization function
-function kickstarter_sanitize_select( $input, $setting ) {
+function highstarter_sanitize_select( $input, $setting ) {
     // Ensure input is a slug.
     $input = sanitize_key( $input );
     // Get list of choices from the control associated with the setting.
@@ -11,14 +11,7 @@ function kickstarter_sanitize_select( $input, $setting ) {
 }
 
 //checkbox sanitization function
-function kickstarter_sanitize_checkbox($checked) {
+function highstarter_sanitize_checkbox($checked) {
     // Boolean check.
     return ((isset($checked) && true == $checked) ? true : false);
-}
-
-//radio box sanitization function
-function kickstarter_sanitize_radio( $input, $setting ){
-    //removes all HTML markup
-    $input = sanitize_text_field($input);
-    return $input;
 }

@@ -1,9 +1,9 @@
 <?php
 /**
- * Kickstarter theme Customizer
+ * Highstarter theme Customizer
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @copyright  Copyright (c) 2020, Atanas Yonkov
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
@@ -17,13 +17,9 @@ require get_template_directory() . '/inc/sanitization-functions.php';
  ** Allow users to change theme colors through the WordPress Customizer
  */
 
-function kickstarter_customize_colors($wp_customize) {
+function highstarter_customize_colors($wp_customize) {
 
-    $wp_customize->add_section('colors', array(
-        'title' => esc_html__('Colors', 'kickstarter'),
-        'description' => esc_html__('Customze the colors of the light theme mode. To customize the dark theme mode, you need to add custom css in the the additional css tab. For more information, please refer to the theme documentation.', 'kickstarter'),
-        'priority' => 99,
-    ));
+    $wp_customize->get_section('colors')->description = esc_html__( 'Customze the colors of the light theme mode. To customize the dark theme mode, you need to add custom css in the the additional css tab. For more information, please refer to the theme documentation.', 'highstarter');
 
     //Primary menu background color
     $wp_customize->add_setting('header_background_color', array(
@@ -31,7 +27,7 @@ function kickstarter_customize_colors($wp_customize) {
         'sanitize_callback' => 'sanitize_hex_color',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_background_color', array(
-        'label' => esc_html__('Header Background Color', 'kickstarter'),
+        'label' => esc_html__('Header Background Color', 'highstarter'),
         'section' => 'colors',
     )));
 
@@ -41,7 +37,7 @@ function kickstarter_customize_colors($wp_customize) {
         'sanitize_callback' => 'sanitize_hex_color',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'site_title_textcolor', array(
-        'label' => esc_html__('Site Title Color', 'kickstarter'),
+        'label' => esc_html__('Site Title Color', 'highstarter'),
         'section' => 'colors',
     )));
 
@@ -52,7 +48,7 @@ function kickstarter_customize_colors($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'link_textcolor', array(
-        'label' => esc_html__('Links Color', 'kickstarter'),
+        'label' => esc_html__('Links Color', 'highstarter'),
         'section' => 'colors',
     )));
 
@@ -63,7 +59,7 @@ function kickstarter_customize_colors($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_textcolor', array(
-        'label' => esc_html__('Headings Text Color', 'kickstarter'),
+        'label' => esc_html__('Headings Text Color', 'highstarter'),
         'section' => 'colors',
     )));
 
@@ -74,14 +70,14 @@ function kickstarter_customize_colors($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'button_color', array(
-        'label' => esc_html__('Buttons', 'kickstarter'),
+        'label' => esc_html__('Buttons', 'highstarter'),
         'section' => 'colors',
     )));
 
 }
-add_action('customize_register', 'kickstarter_customize_colors');
+add_action('customize_register', 'highstarter_customize_colors');
 
-function kickstarter_customize_colors_css() { ?>
+function highstarter_customize_colors_css() { ?>
 <style type="text/css">
 body h1,
 body h2,
@@ -114,19 +110,19 @@ input[type="submit"] {
 </style>
 <?php
 }
-add_action('wp_footer', 'kickstarter_customize_colors_css');
+add_action('wp_footer', 'highstarter_customize_colors_css');
 
 /*
  * Allow users to change or remove the call to action on the Homepage 
  * and customize the header image
  */
 
-function kickstarter_customize_register_banner_and_header($wp_customize) {
+function highstarter_customize_register_banner_and_header($wp_customize) {
 
     $wp_customize->add_section('banner_options', array(
-        'title' => esc_html__('Call to Action', 'kickstarter'),
+        'title' => esc_html__('Call to Action', 'highstarter'),
         'description' => esc_html__('Customize the button on the header of the Homepage.
-        You can change the default text of the button, add link to it or completely hide it.', 'kickstarter'),
+        You can change the default text of the button, add link to it or completely hide it.', 'highstarter'),
     ));
 
     /**
@@ -137,7 +133,7 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
     $wp_customize->add_setting(
         'banner_label',
         array(
-            'default' => esc_html__('Get Started', 'kickstarter'),
+            'default' => esc_html__('Get Started', 'highstarter'),
             'sanitize_callback' => 'sanitize_text_field',
         )
     );
@@ -145,9 +141,9 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
     $wp_customize->add_control(
         'banner_label',
         array(
-            'label' => esc_html__('Banner Text', 'kickstarter'),
+            'label' => esc_html__('Banner Text', 'highstarter'),
             'section' => 'banner_options',
-            'description' => esc_html__('Change the default text of the button.', 'kickstarter'),
+            'description' => esc_html__('Change the default text of the button.', 'highstarter'),
             'type' => 'text',
         )
     );
@@ -164,9 +160,9 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
     $wp_customize->add_control(
         'banner_link',
         array(
-            'label' => esc_html__('Banner Link', 'kickstarter'),
+            'label' => esc_html__('Banner Link', 'highstarter'),
             'section' => 'banner_options',
-            'description' => esc_html__('Add link to the button. You can link it to the about page or the Contact page or a specific section from the Homepage.', 'kickstarter'),
+            'description' => esc_html__('Add link to the button. You can link it to the about page or the Contact page or a specific section from the Homepage.', 'highstarter'),
             'type' => 'url',
         )
     );
@@ -177,8 +173,8 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
      */
 
     $wp_customize->add_section('header_options', array(
-        'title' => esc_html__('Header Options', 'kickstarter'),
-        'description' => esc_html__('Customize the header image to taste with the options below. Change width, height and position of the image. Choose to add or remove the parallax effect of the image.', 'kickstarter'),
+        'title' => esc_html__('Header Options', 'highstarter'),
+        'description' => esc_html__('Customize the header image to taste with the options below. Change width, height and position of the image. Choose to add or remove the parallax effect of the image.', 'highstarter'),
         'priority' => 99,
     ));
 
@@ -187,16 +183,16 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
         'header-background-size',
         array(
             'default' => 'cover',
-            'sanitize_callback' => 'kickstarter_sanitize_select',
+            'sanitize_callback' => 'highstarter_sanitize_select',
         )
     );
 
     $wp_customize->add_control(
         'header-background-size',
         array(
-            'label' => esc_html__('Header Background Size', 'kickstarter'),
+            'label' => esc_html__('Header Background Size', 'highstarter'),
             'section' => 'header_options',
-            'description' => esc_html__('Resize the header image to adjust to the width of the whole screen or choose to keep its initial width.', 'kickstarter'),
+            'description' => esc_html__('Resize the header image to adjust to the width of the whole screen or choose to keep its initial width.', 'highstarter'),
             'type' => 'select',
             'choices' => array(
                 'initial' => esc_html('initial'),
@@ -210,16 +206,16 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
         'header-background-position',
         array(
             'default' => 'center',
-            'sanitize_callback' => 'kickstarter_sanitize_select',
+            'sanitize_callback' => 'highstarter_sanitize_select',
         )
     );
 
     $wp_customize->add_control(
         'header-background-position',
         array(
-            'label' => esc_html__('Header Background Position', 'kickstarter'),
+            'label' => esc_html__('Header Background Position', 'highstarter'),
             'section' => 'header_options',
-            'description' => esc_html__('Choose how you want to position the header image.', 'kickstarter'),
+            'description' => esc_html__('Choose how you want to position the header image.', 'highstarter'),
             'type' => 'select',
             'choices' => array(
                 'top' => esc_html('top'),
@@ -242,10 +238,10 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
     $wp_customize->add_control(
         'header_image_height',
         array(
-            'label' => esc_html__('Header Image Height', 'kickstarter'),
+            'label' => esc_html__('Header Image Height', 'highstarter'),
             'section' => 'header_options',
             'type' => 'text',
-            'description' => esc_html__('Change the height of the header image. Write below a number in pixels (default is 380px).', 'kickstarter'),
+            'description' => esc_html__('Change the height of the header image. Write below a number in pixels (default is 380px).', 'highstarter'),
         )
     );
 
@@ -254,26 +250,26 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
         'header-background-attachment',
         array(
             'default' => 1,
-            'sanitize_callback' => 'kickstarter_sanitize_checkbox',
+            'sanitize_callback' => 'highstarter_sanitize_checkbox',
         )
     );
 
     $wp_customize->add_control(
         'header-background-attachment',
         array(
-            'label' => esc_html__('Header Image Parallax', 'kickstarter'),
+            'label' => esc_html__('Header Image Parallax', 'highstarter'),
             'section' => 'header_options',
-            'description' => esc_html__('Add beautiful parallax effect on the header image.', 'kickstarter'),
+            'description' => esc_html__('Add beautiful parallax effect on the header image.', 'highstarter'),
             'type' => 'checkbox',
         )
     );
 
     // Header Overlay
 
-    function kickstarter_customize_opacity_range() {
+    function highstarter_customize_opacity_range() {
 
         return apply_filters(
-            'kickstarter_customize_opacity_range',
+            'highstarter_customize_opacity_range',
             array(
                 'min' => 0,
                 'max' => 9,
@@ -293,55 +289,55 @@ function kickstarter_customize_register_banner_and_header($wp_customize) {
     $wp_customize->add_control(
         'cover_template_overlay_opacity',
         array(
-            'label' => __('Header Overlay Opacity', 'kickstarter'),
-            'description' => __('Make sure that the contrast is high enough so that the text is readable.', 'kickstarter'),
+            'label' => __('Header Overlay Opacity', 'highstarter'),
+            'description' => __('Make sure that the contrast is high enough so that the text is readable.', 'highstarter'),
             'section' => 'header_options',
             'type' => 'range',
-            'input_attrs' => kickstarter_customize_opacity_range(),
+            'input_attrs' => highstarter_customize_opacity_range(),
         )
     );
 
 }
 
-add_action('customize_register', 'kickstarter_customize_register_banner_and_header');
+add_action('customize_register', 'highstarter_customize_register_banner_and_header');
 
 
 /*
  **Allow users to change page layout (Right sidebar or Fullwidth) via Theme Customizer
  */
 
-function kickstarter_register_theme_customizer($wp_customize) {
+function highstarter_register_theme_customizer($wp_customize) {
 
     $wp_customize->add_section('layout_options', array(
-        'title' => esc_html__('Page Layout', 'kickstarter'),
-        'description' => esc_html__('Change the layout of the whole website. You can choose to display or to hide the right sidebar.', 'kickstarter'),
+        'title' => esc_html__('Page Layout', 'highstarter'),
+        'description' => esc_html__('Change the layout of the whole website. You can choose to display or to hide the right sidebar.', 'highstarter'),
     ));
 
     $wp_customize->add_setting('page_layout', array(
         'default' => 'one',
-        'sanitize_callback' => 'kickstarter_sanitize_radio',
+        'sanitize_callback' => 'highstarter_sanitize_select',
     ));
 
     $wp_customize->add_control(new WP_Customize_Control(
         $wp_customize,
         'layout_options',
         array(
-            'label' => esc_html__('Page Layout', 'kickstarter'),
+            'label' => esc_html__('Page Layout', 'highstarter'),
             'section' => 'layout_options',
             'settings' => 'page_layout',
             'type' => 'radio',
             'choices' => array(
-                'one' => esc_html__('Right Sidebar', 'kickstarter'),
-                'two' => esc_html__('Full-width', 'kickstarter'),
+                'one' => esc_html__('Right Sidebar', 'highstarter'),
+                'two' => esc_html__('Full-width', 'highstarter'),
                 ),
             )
         )
     );
 }
 
-add_action('customize_register', 'kickstarter_register_theme_customizer');
+add_action('customize_register', 'highstarter_register_theme_customizer');
 
-function kickstarter_customize_css() {
+function highstarter_customize_css() {
 
     $layout = get_theme_mod('page_layout');
 
@@ -364,4 +360,4 @@ function kickstarter_customize_css() {
 
     <?php endif;
 }
-add_action('wp_footer', 'kickstarter_customize_css');
+add_action('wp_footer', 'highstarter_customize_css');

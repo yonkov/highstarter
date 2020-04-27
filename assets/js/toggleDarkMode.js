@@ -1,27 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-	var cookieStorage = {
-		setCookie: function setCookie(key, value, time, path) {
-			var expires = new Date();
-			expires.setTime(expires.getTime() + time);
-			var pathValue = '';
-
-			if (typeof path !== 'undefined') {
-				pathValue = 'path=' + path + ';';
-			}
-
-			document.cookie = key + '=' + value + ';' + pathValue + 'expires=' + expires.toUTCString();
-		},
-		getCookie: function getCookie(key) {
-			var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-			return keyValue ? keyValue[2] : null;
-		},
-
-		removeCookie: function removeCookie(key) {   
-			document.cookie = key + '=; Max-Age=0; path=/';
-		}
-	};
-
 	var body = document.getElementsByTagName("body")[0]
 	var switcher = document.getElementsByClassName('wpnm-button')[0];
 
@@ -33,19 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		//If dark mode is selected
 		if (this.classList.contains('active')) {
 			body.classList.add('dark-mode');
-			//Save user preference as a cookie
-			cookieStorage.setCookie('kickstarterNightMode', 'true', 2628000000, '/');
+			localStorage.setItem('highstarterNightMode', 'true');
 		} else {
 			body.classList.remove('dark-mode');
 			setTimeout(function(){
-				cookieStorage.removeCookie('kickstarterNightMode');
+				localStorage.removeItem('highstarterNightMode');
 			}, 100);
 		}
 
 	})
 
 	//Check Storage. Keep user preference on page reload
-	if (cookieStorage.getCookie('kickstarterNightMode')) {
+	if (localStorage.getItem('highstarterNightMode')) {
 		body.classList.add('dark-mode');
 		switcher.classList.add('active');
 	}

@@ -4,8 +4,8 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -47,13 +47,13 @@ get_header(); ?>
 
                 else : ?>
 
-                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kickstarter' ); ?>
+                        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'highstarter' ); ?>
                         </p>
                         <?php
                         get_search_form();
 
                 endif;
-                kickstarter_numeric_posts_nav(); //Pagination
+                highstarter_numeric_posts_nav(); //Pagination
                 ?>       
                     </div>
                 </div>

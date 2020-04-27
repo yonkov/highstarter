@@ -1,6 +1,6 @@
 <?php
 
-function kickstarter_setup() {
+function highstarter_setup() {
     // Let WordPress manage the document title.
     add_theme_support( 'title-tag' );
     //Enable support for Post Thumbnails on posts and pages.
@@ -8,8 +8,8 @@ function kickstarter_setup() {
 	add_theme_support( 'automatic-feed-links');
     // This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'top'    => __( 'Top Menu', 'kickstarter' ),
-		'social' => __( 'Social Links Menu', 'kickstarter' ),
+		'top'    => __( 'Top Menu', 'highstarter' ),
+		'social' => __( 'Social Links Menu', 'highstarter' ),
 	) );
     
     /*
@@ -36,18 +36,18 @@ function kickstarter_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'kickstarter_setup' );
+add_action( 'after_setup_theme', 'highstarter_setup' );
 
 if (isset( $content_width ))
-    $kickstarter_content_width = 900;
+    $highstarter_content_width = 900;
 
 //Register widget area.
 
-function kickstarter_widgets_init() {
+function highstarter_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Right Sidebar', 'kickstarter' ),
+		'name'          => __( 'Right Sidebar', 'highstarter' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'kickstarter' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'highstarter' ),
 		'before_widget' => '<section id="%1$s" class="sidebar-box">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="heading">',
@@ -55,9 +55,9 @@ function kickstarter_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'kickstarter' ),
+		'name'          => __( 'Footer 1', 'highstarter' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'kickstarter' ),
+		'description'   => __( 'Add widgets here to appear in your footer.', 'highstarter' ),
 		'before_widget' => '<section id="%1$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="heading">',
@@ -65,9 +65,9 @@ function kickstarter_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'kickstarter' ),
+		'name'          => __( 'Footer 2', 'highstarter' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'kickstarter' ),
+		'description'   => __( 'Add widgets here to appear in your footer.', 'highstarter' ),
 		'before_widget' => '<section id="%1$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -75,27 +75,27 @@ function kickstarter_widgets_init() {
 	) );
 
 }
-add_action( 'widgets_init', 'kickstarter_widgets_init' );
+add_action( 'widgets_init', 'highstarter_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function kickstarter_styles() {
+function highstarter_styles() {
 	//Theme Navigation 
-    wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(),'',true);
+    wp_enqueue_script( 'highstarter-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(),'',true);
     //Toggle Dark Theme Mode
-    wp_enqueue_script( 'dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(),'',true);
+    wp_enqueue_script( 'highstarter-dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(),'',true);
 	//Theme stylesheet.
-    wp_enqueue_style( 'kickstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.1' );
+    wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.3' );
 }
 
-add_action( 'wp_enqueue_scripts', 'kickstarter_styles', 99 );
+add_action( 'wp_enqueue_scripts', 'highstarter_styles', 99 );
 
 /**
  * Enqueue fonts to the footer for better peformance
  */
 
-function kickstarter_fonts() { 
+function highstarter_fonts() { 
     //Add dashicons
     wp_enqueue_style( 'dashicons' );
     //Add google fonts 
@@ -103,19 +103,10 @@ function kickstarter_fonts() {
 	wp_enqueue_style( 'OpenSans', '//fonts.googleapis.com/css?family=Open+Sans' ); 
 }
 
-add_action( 'wp_footer', 'kickstarter_fonts' ); 
-
-function kickstarter_remove_image_size_attributes( $html ) {
-    return preg_replace( '/(width|height)="\d*"/', '', $html );
-}   
-// Remove image size attributes from post thumbnails
-add_filter( 'post_thumbnail_html', 'kickstarter_remove_image_size_attributes' );
-    
-// Remove image size attributes from images added to a WordPress post
-add_filter( 'image_send_to_editor', 'kickstarter_remove_image_size_attributes' );
+add_action( 'wp_footer', 'highstarter_fonts' ); 
 
 //Make drop down menu accessible by screen readers
-function kickstarter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+function highstarter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 // Add [aria-haspopup] and [aria-expanded] to menu items that have children
     $item_has_children = in_array( 'menu-item-has-children', $item->classes );
     if ( $item_has_children ) {
@@ -124,11 +115,11 @@ function kickstarter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
     }
     return $atts;
 }
-add_filter( 'nav_menu_link_attributes', 'kickstarter_nav_menu_link_attributes', 10, 4 );
+add_filter( 'nav_menu_link_attributes', 'highstarter_nav_menu_link_attributes', 10, 4 );
 
 //Filter Classes of wp_list_pages items to match menu items
 
-function kickstarter_filter_menu_item_classes( $css_class) {
+function highstarter_filter_menu_item_classes( $css_class) {
 	// Add current menu item class.
 	if ( in_array( 'current_page_item', $css_class, true ) ) {
 		$css_class[] = 'current-menu-item';
@@ -140,11 +131,11 @@ function kickstarter_filter_menu_item_classes( $css_class) {
 	return $css_class;
 }
 
-add_filter( 'page_css_class', 'kickstarter_filter_menu_item_classes', 10, 5 );
+add_filter( 'page_css_class', 'highstarter_filter_menu_item_classes', 10, 5 );
 
 /* Modify comments markup*/
 
-function kickstarter_modify_comment_output( $comment, $depth, $args ) {
+function highstarter_modify_comment_output( $comment, $depth, $args ) {
 	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li'; ?>
 <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>"
     <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent', $comment ); ?>>
@@ -155,7 +146,7 @@ function kickstarter_modify_comment_output( $comment, $depth, $args ) {
                 <?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
                 <?php
 				/* translators: %s: comment author link */
-				printf( __( '%s <span class="says">says:</span>', 'kickstarter' ),
+				printf( __( '%s <span class="says">says:</span>', 'highstarter' ),
 						sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) )
 				);
 				?>
@@ -164,15 +155,15 @@ function kickstarter_modify_comment_output( $comment, $depth, $args ) {
                 <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
                     <time datetime="<?php comment_time( 'c' ); ?>">
                         <?php
-						printf( _x( '%s ago', '%s = human-readable time difference', 'kickstarter' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+						printf( _x( '%s ago', '%s = human-readable time difference', 'highstarter' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
 						?>
                     </time>
                 </a>
-                <?php edit_comment_link( __( 'edit', 'kickstarter' ), '<span class="edit-link">', '</span>' ); ?>
+                <?php edit_comment_link( __( 'edit', 'highstarter' ), '<span class="edit-link">', '</span>' ); ?>
             </div><!-- .comment-metadata -->
 
             <?php if ( '0' == $comment->comment_approved ) : ?>
-            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'kickstarter' ); ?>
+            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'highstarter' ); ?>
             </p>
             <?php endif; ?>
         </footer><!-- .comment-meta -->
@@ -184,80 +175,19 @@ function kickstarter_modify_comment_output( $comment, $depth, $args ) {
     <?php
 }
 
-wp_list_comments("callback=kickstarter_modify_comment_output");
+wp_list_comments("callback=highstarter_modify_comment_output");
 
 // IMPLEMENT SIMPLE PAGINATION
 
-function kickstarter_numeric_posts_nav() {
- 
-    if( is_singular() )
-        return;
- 
-    global $wp_query;
- 
-    /** Stop execution if there's only 1 page */
-    if( $wp_query->max_num_pages <= 1 )
-        return;
- 
-    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max   = intval( $wp_query->max_num_pages );
- 
-    /** Add current page to the array */
-    if ( $paged >= 1 )
-        $links[] = $paged;
- 
-    /** Add the pages around the current page to the array */
-    if ( $paged >= 3 ) {
-        $links[] = $paged - 1;
-        $links[] = $paged - 2;
-    }
- 
-    if ( ( $paged + 2 ) <= $max ) {
-        $links[] = $paged + 2;
-        $links[] = $paged + 1;
-    }
- 
-    echo '<div class="navigation"><ul>' . "\n";
- 
-    /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_previous_posts_link('&#x00AB') );
- 
-    /** Link to first page, plus ellipses if necessary */
-    if ( ! in_array( 1, $links ) ) {
-        $class = 1 == $paged ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-        if ( ! in_array( 2, $links ) )
-            echo '<li>...</li>';
-    }
- 
-    /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
-    foreach ( (array) $links as $link ) {
-        $class = $paged == $link ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-    }
- 
-    /** Link to last page, plus ellipses if necessary */
-    if ( ! in_array( $max, $links ) ) {
-        if ( ! in_array( $max - 1, $links ) )
-            echo '<li>...</li>' . "\n";
- 
-        $class = $paged == $max ? ' class="active"' : '';
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-    }
- 
-    /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_next_posts_link('&#x00BB') );
- 
-    echo '</ul></div>' . "\n";
-
+function highstarter_numeric_posts_nav(){
+    return the_posts_pagination( array(
+        'mid_size'  =>2,
+        'prev_text' => __( '&#x00AB', 'highstarter' ),
+        'next_text' => __( '&#x00BB', 'highstarter' ),
+    ) );
 }
 
-
-function kickstarter_the_custom_logo() {
+function highstarter_the_custom_logo() {
 
     if (function_exists('the_custom_logo') && has_custom_logo()) {
         the_custom_logo();
@@ -277,17 +207,17 @@ else{ //Prior WP 4.7
 }
 
 //Post navigation after post content
-function kickstarter_the_posts_navigation() {
+function highstarter_the_posts_navigation() {
 
     $args = array(
-        'prev_text' => __('Previous Post: ', 'kickstarter') . '<span>%title</span>',
-        'next_text' => __('Next Post: ', 'kickstarter') . '<span>%title</span>',    
+        'prev_text' => __('Previous Post: ', 'highstarter') . '<span>%title</span>',
+        'next_text' => __('Next Post: ', 'highstarter') . '<span>%title</span>',    
     );
 
     the_post_navigation($args);
 }
 
-function kickstarter_thumbnail($size = '') {
+function highstarter_thumbnail($size = '') {
 
     if (has_post_thumbnail()) {?>
     <div class="post-thumbnail">
@@ -305,7 +235,7 @@ function kickstarter_thumbnail($size = '') {
 }
 
 //Display post meta data before and after post content
-function kickstarter_post_meta_header() {
+function highstarter_post_meta_header() {
 
     if (is_new_day()): ?>
     <span class="posted-date"><?php the_date();?></span>
@@ -315,14 +245,14 @@ function kickstarter_post_meta_header() {
 
     <?php if (!post_password_required() && (comments_open() || get_comments_number())): ?>
     <span class="comments-number">
-        <?php comments_popup_link(esc_html__('Leave a comment', 'kickstarter'), esc_html__('1 Comment', 'kickstarter'), /* translators: number of comments */esc_html__('% Comments', 'kickstarter'), 'comments-link');?>
+        <?php comments_popup_link(esc_html__('Leave a comment', 'highstarter'), esc_html__('1 Comment', 'highstarter'), /* translators: number of comments */esc_html__('% Comments', 'highstarter'), 'comments-link');?>
     </span>
     <?php endif;?>
 
     <?php
 }
 
-function kickstarter_post_meta_footer() {
+function highstarter_post_meta_footer() {
     if ('post' === get_post_type()): ?>
 
     <?php $category_list = get_the_category_list(esc_html(', '));?>
@@ -344,13 +274,13 @@ function kickstarter_post_meta_footer() {
 }
 
 // Add very simple breadcrumps
-function kickstarter_breadcrumbs() { 
+function highstarter_breadcrumbs() { 
     
     if( is_front_page() )
     
     return; ?>
 
-    <a href="<?php echo home_url();?>"><?php _e( 'Home', 'kickstarter' ); ?></a>
+    <a href="<?php echo home_url();?>"><?php _e( 'Home', 'highstarter' ); ?></a>
 
     <?php
     if (is_category() || is_single()) {
@@ -373,9 +303,9 @@ function kickstarter_breadcrumbs() {
 }
 
 // Add post navigation to previous and next post after post content 
-function  kickstarter_post_nav($args = array()) {
+function  highstarter_post_nav($args = array()) {
     if(!is_rtl()){
-        $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
+        $defaults = (array) apply_filters( 'highstarter_post_nav_default_args', array(
             'prev_text' => '&larr; %title',
             'next_text' => '%title &rarr;',
             
@@ -387,7 +317,7 @@ function  kickstarter_post_nav($args = array()) {
 
     else{
 
-        $defaults = (array) apply_filters( 'kickstarter_post_nav_default_args', array(
+        $defaults = (array) apply_filters( 'highstarter_post_nav_default_args', array(
             'prev_text' => '%title &larr;',
             'next_text' => '&rarr; %title',
             
@@ -399,11 +329,11 @@ function  kickstarter_post_nav($args = array()) {
 }
 
 //  Call to action button on homepage
-function kickstarter_call_to_action(){
+function highstarter_call_to_action(){
     
     if( is_front_page() || is_home() ) :
         
-        $banner_label = get_theme_mod('banner_label', __( 'Get Started', 'kickstarter' ));
+        $banner_label = get_theme_mod('banner_label', __( 'Get Started', 'highstarter' ));
         $banner_link = get_theme_mod( 'banner_link', '#' );
         
         if ( $banner_label && $banner_link ) : ?>
@@ -411,8 +341,8 @@ function kickstarter_call_to_action(){
         <p>
             <a class="button" 
                 href="<?php echo esc_url($banner_link); ?>" 
-                aria-label="<?php printf( /* translators: continue reading */ esc_attr__( 'Continue Reading', 'kickstarter' ) ); ?>">
-                <?php printf( /* translators: right arrow (LTR) / left arrow (RTL) */ $banner_label . ' ' . '%s', is_rtl() ? '&larr;' : '&rarr;' ); ?>
+                aria-label="<?php printf( /* translators: continue reading */ esc_attr__( 'Continue Reading', 'highstarter' ) ); ?>">
+                <?php printf( /* translators: right arrow (LTR) / left arrow (RTL) */ esc_attr($banner_label) . ' ' . '%s', is_rtl() ? '&larr;' : '&rarr;' ); ?>
             </a>
         </p>
 
@@ -421,26 +351,28 @@ function kickstarter_call_to_action(){
     endif;
 }
 
+if ( ! function_exists( 'wp_body_open' ) ) :
+    /**
+     * backwards compatibility for wp_body_open action prior WordPress 5.2
+     */
+    function wp_body_open() {
+
+        do_action( 'wp_body_open' );
+    
+    }
+endif;
+
 /**
  * Enable dark theme mode
- * 
- * Adapted from https://wordpress.org/plugins/wp-night-mode/
- * 
+ * Hook js right after the body tag to avoid light flash of unstyled content
  */
-
-function kickstarter_dark_mode($classes) {
-
-    $kickstarter_night_mode = isset( $_COOKIE['kickstarterNightMode'] ) ? $_COOKIE['kickstarterNightMode'] : '';
-
-    if ($kickstarter_night_mode!=='' ) {
-        
-        // Add 'dark-mode' body class
-            return array_merge( $classes, array( 'dark-mode' ) );
-
-    }
-
-    return $classes;
-  
+function highstarter_dark_mode() {
+    ?>
+        <script>
+            if (localStorage.getItem('highstarterNightMode')) {
+                document.body.className +=' dark-mode';
+	        }
+        </script>
+    <?php
 }
-
-add_filter( 'body_class', 'kickstarter_dark_mode');
+add_action('wp_body_open', 'highstarter_dark_mode');

@@ -2,8 +2,8 @@
 /**
  * Displays footer site info
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -19,15 +19,15 @@
 	?>
     <div class="footer-credits">
         <a href="<?php echo esc_url( 'https://yonkov.github.io/' ); ?>" class="imprint">
-            <?php printf( __( 'Designed by %s', 'kickstarter' ), 'Atanas Yonkov' );?>
+            <?php printf( __( 'Designed by %s', 'highstarter' ), 'Atanas Yonkov' );?>
         </a>
         <span> || </span>
         <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>" class="imprint">
-            <?php printf( __( 'Powered by %s', 'kickstarter' ), 'WordPress' ); ?>
+            <?php printf( __( 'Powered by %s', 'highstarter' ), 'WordPress' ); ?>
         </a>
     </div>
-    <div class="wpnm-button">
+    <button class="wpnm-button">
         <div class="wpnm-button-inner-left"></div>
         <div class="wpnm-button-inner"></div>
-    </div>
+    </button>
 </div>

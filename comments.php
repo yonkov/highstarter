@@ -7,8 +7,8 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  */
@@ -26,7 +26,7 @@ if (post_password_required()) {
 <div id="comments" class="comment-content">
     <?php if (have_comments()): ?>
     <h3 class="mb-5">
-        <?php printf(__('Comments', 'kickstarter')); ?>
+        <?php printf(__('Comments', 'highstarter')); ?>
     </h3>
 
     <?php the_comments_navigation();?>
@@ -49,11 +49,11 @@ if (post_password_required()) {
     comment_form(array(
         'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title">',
         'title_reply_after' => '</h3>',
-        'title_reply' => __('Leave a Comment', 'kickstarter'),
+        'title_reply' => __('Leave a Comment', 'highstarter'),
         'class_submit' => 'btn btn-primary',
-        'label_submit' => __('Submit Query', 'kickstarter'),
+        'label_submit' => __('Submit Query', 'highstarter'),
         'comment_field' => '<p class="comment-form-comment">' .
-        '<label for="comment">' . __('Message', 'kickstarter') . '</label>' .
+        '<label for="comment">' . __('Message', 'highstarter') . '</label>' .
         '<textarea id="comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true"></textarea>' .
         '</p>',
     ));

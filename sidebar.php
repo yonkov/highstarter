@@ -4,8 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -14,17 +14,14 @@
 
 if (is_active_sidebar('sidebar-1')): ?>
 <aside id="secondary" class="sidebar-wrapper sidebar widget-area>" role="complementary"
-    aria-label="<?php esc_attr_e('Right Sidebar', 'kickstarter');?>">
+    aria-label="<?php esc_attr_e('Right Sidebar', 'highstarter');?>">
     <?php dynamic_sidebar('sidebar-1');?>
 </aside><!-- #secondary -->
 <?php else: //Starter content in the right sidebar ?>
 <aside id="secondary" class="sidebar-wrapper sidebar widget-area>" role="complementary"
-    aria-label="<?php esc_attr_e('Right Sidebar', 'kickstarter');?>">
+    aria-label="<?php esc_attr_e('Right Sidebar', 'highstarter');?>">
     <section id="search-form-2" class="sidebar-box">
         <?php get_search_form();?>
-    </section>
-    <section id="recent-posts-2" class="sidebar-box"> 
-        <?php the_widget('Recent_Posts_Widget');?>
     </section>
 </aside><!-- #secondary -->
 <?php endif; // end primary widget area

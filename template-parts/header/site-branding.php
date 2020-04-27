@@ -2,8 +2,8 @@
 /**
  * Template part for displaying the logo, site title and header banner.
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -20,14 +20,14 @@
                     <?php bloginfo('name');?>
                 </a>
             </h1>
-    <?php $kickstarter_description = get_bloginfo('description', 'display');
+    <?php $highstarter_description = get_bloginfo('description', 'display');
     
-    if ($kickstarter_description || is_customize_preview()): ?>
+    if ($highstarter_description || is_customize_preview()): ?>
         <p class="site-description">
-            <?php echo $kickstarter_description; ?>
+            <?php echo $highstarter_description; ?>
         </p>
         <!--Call to action-->
-        <?php kickstarter_call_to_action() ?>
+        <?php highstarter_call_to_action() ?>
         </div>
     <?php endif;?>
     </div>

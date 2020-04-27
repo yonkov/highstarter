@@ -3,8 +3,8 @@
  * Sample implementation of the Custom Header feature
  *
  * @link       https://developer.wordpress.org/themes/functionality/custom-headers/
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @copyright  Copyright (c) 2020, Atanas Yonkov
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
@@ -12,24 +12,24 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses kickstarter_header_style()
+ * @uses highstarter_header_style()
  */
-function kickstarter_custom_header_setup() {
-    add_theme_support('custom-header', apply_filters('kickstarter_custom_header_args', array(
+function highstarter_custom_header_setup() {
+    add_theme_support('custom-header', apply_filters('highstarter_custom_header_args', array(
         'default-image'      => get_template_directory_uri() . '/assets/images/2500X750.jpg',
         'flex-width'         => true,
         'flex-height'        => true,
         'width'              => 2000,
         'height'             => 540,
-        'wp-head-callback'   => 'kickstarter_header_style',
+        'wp-head-callback'   => 'highstarter_header_style',
     )));
 }
-add_action('after_setup_theme', 'kickstarter_custom_header_setup');
+add_action('after_setup_theme', 'highstarter_custom_header_setup');
 
-if (! function_exists('kickstarter_header_style')) :
+if (! function_exists('highstarter_header_style')) :
     
     //Style the header image from the theme customizer.
-    function kickstarter_header_style() {
+    function highstarter_header_style() {
         $height = get_theme_mod('header_image_height', '380px');
         $repeat = get_theme_mod('header-background-repeat', 'no-repeat');
         $size = get_theme_mod('header-background-size', 'cover');

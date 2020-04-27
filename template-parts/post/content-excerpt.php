@@ -4,8 +4,8 @@
  *
  * @link       https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -16,7 +16,7 @@
 
 <article <?php post_class(); ?>>
 
-	<?php kickstarter_thumbnail(); ?>
+	<?php highstarter_thumbnail(); ?>
 
 	<div class="entry-header">
 
@@ -31,7 +31,7 @@
 			?>
 
 			<div class="entry-meta posted-on">
-				<?php kickstarter_post_meta_header() ?>
+				<?php highstarter_post_meta_header() ?>
 			</div><!-- .entry-meta -->
 
 		<?php endif; ?>
@@ -40,12 +40,11 @@
 
 	<div class="entry-content">
 		<?php
-        the_excerpt( esc_html__( 'Read More &rarr;', 'kickstarter' ) ); ?>
-        <p><a class="button" href="<?php the_permalink(); ?>" aria-label="<?php printf( /* translators: post title */ esc_attr__( 'Read More %s', 'kickstarter' ), get_the_title() ); ?>"><?php printf( /* translators: right arrow (LTR) / left arrow (RTL) */ esc_html__( 'Read More %s', 'kickstarter' ), is_rtl() ? '&larr;' : '&rarr;' ); ?></a></p>
-
+        the_excerpt( esc_html__( 'Read More &rarr;', 'highstarter' ) ); ?>
+        <p><a class="button" href="<?php the_permalink(); ?>" aria-label="<?php printf( /* translators: post title */ esc_attr__( 'Read More %s', 'highstarter' ), esc_attr(get_the_title()) ); ?>"><?php printf( /* translators: right arrow (LTR) / left arrow (RTL) */ esc_html__( 'Read More %s', 'highstarter' ), is_rtl() ? '&larr;' : '&rarr;' ); ?></a></p>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kickstarter' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'highstarter' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -53,7 +52,7 @@
 
 	<div class="entry-footer">
         <div class="entry-meta taxonomies">
-            <?php kickstarter_post_meta_footer(); ?>
+            <?php highstarter_post_meta_footer(); ?>
         </div>
 	</div><!-- .entry-footer -->
 

@@ -1,23 +1,23 @@
-=== Kickstarter ===
+=== Highstarter ===
 Contributors: nravota12
 Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 1.25
-Stable tag: 1.25
+Version: 1.29
+Stable tag: 1.29
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
-Kickstarter is a super lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. This makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 30KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. The visitors can choose between light and dark theme mode and change their preferences at any time. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
+Highstarter is a lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. This makes it fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 30KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. The visitors can choose between light and dark theme mode and change their preferences at any time. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor.
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Kickstarter in the search form and press the 'Enter' key on your keyboard.
+2. Type in Highstarter in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
@@ -25,12 +25,12 @@ Kickstarter is a super lightweight starter theme without any libraries or framew
 
 = Where can I find theme documentation? =
 
-You can read the Theme Instructions at https://github.com/yonkov/Kickstarter in the Readme.md file.
+You can read the Theme Instructions at https://github.com/yonkov/kickstarter in the Readme.md file.
 
 == Copyright ==
 
-Kickstarter WordPress Theme, Copyright 2020 Atanas Yonkov
-Kickstarter is distributed under the terms of the GNU GPLv2 or later
+Highstarter WordPress Theme, Copyright 2020 Atanas Yonkov
+Highstarter is distributed under the terms of the GNU GPLv2 or later
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -51,7 +51,7 @@ License: CC0 1.0 Universal (CC0 1.0)
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/XQVNNEFHWD
 
-3. Kickstarter uses Dashicons icon font, 
+3. Highstarter uses Dashicons icon font, 
 the official icon font of the WordPress admin as of 3.8.
 License: GPL-2.0 (or later)
 Source: https://developer.wordpress.org/resource/dashicons/
@@ -69,6 +69,23 @@ https://wordpress.org/themes/twentyseventeen/,
 License: GNU General Public License v2 or later
 
 == Changelog ==
+
+=1.29 =
+* First release in WP repository
+* Remove light flash of unstyled content on page reload in dark mode
+Released: April, 2020
+
+= 1.28 =
+* Updated theme screenshot
+Released: April, 2020
+
+= 1.27 =
+* Theme renamed to Highstarter to avoid trademark issues
+Released: April, 2020
+
+= 1.26 =
+* Going through theme review: fixing notices, properly escaping output and fixing sanitize issues 
+Released: April, 2020
 
 = 1.25 =
 * Update docs and attribution

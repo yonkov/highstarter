@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="post-title">
-                    <h3><?php _e( 'Posts', 'kickstarter'); ?></h3>
+                    <h3><?php _e( 'Posts', 'highstarter'); ?></h3>
                 </div>
             </div>
             <div class="row blog-entries">
@@ -16,9 +16,9 @@
                         while (have_posts() ) : the_post();
                         	get_template_part( 'template-parts/post/content', 'excerpt', get_post_format() );
                         endwhile;
-                    kickstarter_numeric_posts_nav();
+                    highstarter_numeric_posts_nav();
                     else :
-                        _e( 'There are no posts!', 'kickstarter');                
+                        _e( 'There are no posts!', 'highstarter');                
                     endif;
                     ?>
                     </div>

@@ -4,8 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -22,7 +22,7 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
                 get_template_part( 'template-parts/post/content', get_post_format() );
-                kickstarter_post_nav();
+                highstarter_post_nav();
 				// If comments are open, load up the comment template.
 				if ( comments_open() ) :
 					comments_template();

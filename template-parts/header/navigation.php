@@ -2,8 +2,8 @@
 /**
  * Template part for displaying the primary navigation menu.
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -13,11 +13,11 @@
 ?>
 
 <!--Toggle menu on mobile-->
-<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0">
+<button class="menu-toggle" id="menu-toggle" role="button" tabindex="0">
     <div></div>
     <div></div>
     <div></div>
-</div>
+</button>
 
 <nav id="site-navigation" class="main-navigation">
 

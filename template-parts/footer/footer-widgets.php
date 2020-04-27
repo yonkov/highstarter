@@ -2,8 +2,8 @@
 /**
  * Add 2 places to insert widgets in the Footer
  *
- * @package WordPress
- * @subpackage Kickstarter
+ * @package Highstarter
+ * 
  * @since 1.0
  * @version 1.0
  * @copyright  Copyright (c) 2020, Atanas Yonkov
@@ -13,7 +13,7 @@
 ?>
 
 
-<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'kickstarter' ); ?>">
+<aside class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'highstarter' ); ?>">
     <?php
 //Add content to the footer
 if ( is_active_sidebar( 'sidebar-2' ) || is_active_sidebar( 'sidebar-3' ) ) : ?>
