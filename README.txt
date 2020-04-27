@@ -4,8 +4,8 @@ Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 1.29
-Stable tag: 1.29
+Version: 1.30
+Stable tag: 1.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -69,6 +69,10 @@ https://wordpress.org/themes/twentyseventeen/,
 License: GNU General Public License v2 or later
 
 == Changelog ==
+
+=1.30 -
+* Update docs and fix full width mode
+Released: April, 2020
 
 =1.29 =
 * First release in WP repository

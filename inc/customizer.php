@@ -315,7 +315,7 @@ function highstarter_register_theme_customizer($wp_customize) {
 
     $wp_customize->add_setting('page_layout', array(
         'default' => 'one',
-        'sanitize_callback' => 'highstarter_sanitize_select',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control(new WP_Customize_Control(
