@@ -17,6 +17,7 @@ Highstarter is a lightweight starter theme developed by Atanas Yonkov in 2020. I
     - [Homepage Settings](#homepage-settings)
     - [Dark Mode](#dark-mode)
     - [Additional CSS](#additional-css)
+  - [Child theme](#child-theme)
 - [License](#license)
 
 Highstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
@@ -117,7 +118,9 @@ Protect your visitors' eyes and help them spend more time on your website by all
 ### Additional CSS
 This section is for more advanced users who want to write custom css to override the default theme's styles.
 
-If you want to customise Highstarter beyond the included options, I strongly recommend that you do so via a [child theme](http://codex.wordpress.org/Child_Themes).
+## Child theme
+
+If you want to customise Highstarter beyond the included options, I strongly recommend that you do so via a [child theme](https://developer.wordpress.org/themes/advanced-topics/child-themes/). Here is a [premade child theme](https://github.com/yonkov/highstarter-child) of the Highstarter theme that you can use to get started.
 
 # License
 * License: [GNU General Public License v2.0](http://www.gnu.org/licenses/gpl-2.0.html)
