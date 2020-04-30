@@ -7,7 +7,7 @@ Description: Highstarter is a lightweight starter theme without any libraries or
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 1.30
+Version: 1.31
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1346,21 +1346,15 @@ button, input, optgroup, select, textarea {
   line-height: inherit
 }
 
+input:focus, textarea:focus {
+  border: 1px dotted;
+}
+
 .form-control {
   outline: none;
-  -webkit-box-shadow: none !important;
+  -webkit-box-shadow: none;
   box-shadow: none !important;
   border-radius: 0;
-}
-
-.form-control:focus,
-.form-control:active {
-  outline: none;
-}
-
-.form-control {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
 }
 
 textarea.form-control {

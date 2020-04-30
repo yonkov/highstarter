@@ -342,7 +342,7 @@ function highstarter_call_to_action(){
             <a class="button" 
                 href="<?php echo esc_url($banner_link); ?>" 
                 aria-label="<?php printf( /* translators: continue reading */ esc_attr__( 'Continue Reading', 'highstarter' ) ); ?>">
-                <?php printf( /* translators: right arrow (LTR) / left arrow (RTL) */ esc_attr($banner_label) . ' ' . '%s', is_rtl() ? '&larr;' : '&rarr;' ); ?>
+                <?php printf( /* translators: right arrow (LTR) / left arrow (RTL) */ esc_html($banner_label) . ' ' . '%s', is_rtl() ? '&larr;' : '&rarr;' ); ?>
             </a>
         </p>
 

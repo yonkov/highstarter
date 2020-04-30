@@ -8,6 +8,7 @@ Highstarter is a lightweight starter theme developed by Atanas Yonkov in 2020. I
   - [Theme Options](#theme-options)
     - [Site identity](#site-identity)
     - [Header Image](#header-image)
+    - [Header Options](#header-options)
     - [Call to Action](#call-to-action)
     - [Page Layout](#page-layout)
     - [Colors](#colors)
@@ -20,7 +21,7 @@ Highstarter is a lightweight starter theme developed by Atanas Yonkov in 2020. I
 
 Highstarter has just enough theme options to get you started. In fact, its theme customizer offers more options than most of the other free themes in the market:
 
-- light and dark theme mode
+- light and dark theme mode switch
 - custom header image
 - options to change header image height and position
 - options to add image overlay and parallax effect to the header image
@@ -67,6 +68,7 @@ To use the theme's customizer log in to your dashboard and navigate to Appearanc
 ### Header Image
 Highstarter supports the option to add custom header image via the theme customizer. Go to Appearance > Customize > Header Image and upload a header image from your PC. The recommended image size is 2000X420px. You have the options to crop the image (top, bottom or center) or to use the whole image (in this case it should center vertically). As a general recommendation, I would suggest to always compress the images that you upload, otherwise the site performace may deteriorate with time. Read more about that [here](https://rawinfopages.co.uk/squash-images-with-squoosh-to-improve-website-performance/).
 
+### Header Options
 When you scroll down in the same section from the theme customizer (Header Image), you will see that there are options to customize the header image. You can choose to change the image position, change the image height, display paralax effect and image overlay.
 
 ### Call to Action
@@ -76,10 +78,10 @@ The call to action banner is the big orange button on the header of the homepage
 Choose between page layout with right sidebar or full-width layout with a single click.
 
 ### Colors
-Change theme colors such as the header, the headings,the links, the buttons and the primary menu text.
+Change the colors of the light theme such as the header, the headings, the links, the buttons and the primary menu text items.
 
 ### Widgets
-Widgets are something very useful if you want to display dynamic info such as latest posts, latest comments or post archives on the website. Highstarter theme supports two places to add widgets, the right sidebar and the footer. If you have chosen full-width layout, you will be able to add widgets in the footer only. This theme works best if you add just one widget in "Footer 1" and two widgets in "Footer 2". In the "Right Sidebar" widget you can add as many widgets as you want.
+Widgets are something very useful if you want to display dynamic info such as latest posts, latest comments or post archives on the website. Highstarter theme supports two places to add widgets: the right sidebar and the footer. If you have chosen full-width layout, you will be able to add widgets in the footer only. This theme works best if you add just one widget in "Footer 1" and two widgets in "Footer 2". In the "Right Sidebar" widget you can add as many widgets as you want.
 
 ### Menus
 This theme supports two menu locations - Top menu and Social Links Menu. 
