@@ -71,18 +71,19 @@ License: GNU General Public License v2 or later
 == Changelog ==
 
 =2.0.0 =
-* Improve dark mode css. Add dark mode settings in theme customizer. Fix headings text color.
+* Improve dark mode css. Add dark mode settings in theme customizer. 
+* Fix headings text color.
 Released: May, 2020
 
-=1.31 =
+= 1.31 =
 * Update code
 Released: April, 2020
 
-=1.30 =
+= 1.30 =
 * Update docs and fix full width mode
 Released: April, 2020
 
-=1.29 =
+= 1.29 =
 * First release in WP repository
 * Remove light flash of unstyled content on page reload in dark mode
 Released: April, 2020

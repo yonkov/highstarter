@@ -667,8 +667,9 @@ pre{
   padding: 0 0 0 .77em;
 }
 
-.menu-toggle:focus {
-  outline: 1px dotted #d3d3d3;
+/* Target Chrome */
+.menu-toggle:focus:not(*:root) {
+    outline: 1px dotted #d3d3d3;
 }
 
 .menu-toggle div {

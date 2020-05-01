@@ -132,9 +132,8 @@ blockquote {
 /* Mobile menu */
 
 .menu-toggle {
-    left: 0;
+    left: 10px;
     right: auto;
-    padding: 0 0 24px 9px;
 }
 
 /* Add arrows for menu items that has children menu items */

@@ -403,23 +403,24 @@ function highstarter_customize_night_mode_css() {
 	$isDarkMode = get_theme_mod('enable_dark_mode', 1)? 'block': 'none';
     
     ?>
-	<style type="text/css">
-    body.dark-mode header, body.dark-mode main *, 
-    body.dark-mode main .hentry, body.dark-mode main .sidebar-box,
-    body.dark-mode .site-header-wrapper,
-    body.dark-mode .main-navigation ul,
-    body.dark-mode .main-navigation ul ul {
-        background-color: <?php echo esc_attr(get_theme_mod('dark_mode_background_color', "#262626")); ?>;
-    }
-    body.dark-mode form#commentform, body.dark-mode .comment-body {
-        background-color: <?php echo esc_attr(get_theme_mod('dark_mode_background_color', "#262626")); ?> !important;
-    }
-	.wpnm-button{
-		display: <?php echo esc_attr($isDarkMode);?>
-	}
-	</style> 
-	<?php
 
+<style type="text/css">
+body.dark-mode header, body.dark-mode main *, 
+body.dark-mode main .hentry, body.dark-mode main .sidebar-box,
+body.dark-mode .site-header-wrapper,
+body.dark-mode .main-navigation ul,
+body.dark-mode .main-navigation ul ul {
+    background-color: <?php echo esc_attr(get_theme_mod('dark_mode_background_color', "#262626")); ?>;
+}
+body.dark-mode form#commentform, body.dark-mode .comment-body {
+    background-color: <?php echo esc_attr(get_theme_mod('dark_mode_background_color', "#262626")); ?> !important;
+}
+.wpnm-button{
+	display: <?php echo esc_attr($isDarkMode);?>
+}
+</style>
+
+	<?php
 }
 
-add_action( 'wp_footer', 'highstarter_customize_night_mode_css');
+add_action( 'wp_head', 'highstarter_customize_night_mode_css');
