@@ -9,13 +9,12 @@ Highstarter is a lightweight starter theme developed by Atanas Yonkov in 2020. I
     - [Site identity](#site-identity)
     - [Header Image](#header-image)
     - [Header Options](#header-options)
-    - [Call to Action](#call-to-action)
     - [Page Layout](#page-layout)
     - [Colors](#colors)
     - [Widgets](#widgets)
     - [Menus](#menus)
     - [Homepage Settings](#homepage-settings)
-    - [Dark Mode](#dark-mode)
+    - [Night Mode](#night-mode)
     - [Additional CSS](#additional-css)
   - [Child theme](#child-theme)
 - [License](#license)
@@ -70,9 +69,8 @@ To use the theme's customizer log in to your dashboard and navigate to Appearanc
 Highstarter supports the option to add custom header image via the theme customizer. Go to Appearance > Customize > Header Image and upload a header image from your PC. The recommended image size is 2000X420px. You have the options to crop the image (top, bottom or center) or to use the whole image (in this case it should center vertically). As a general recommendation, I would suggest to always compress the images that you upload, otherwise the site performace may deteriorate with time. Read more about that [here](https://rawinfopages.co.uk/squash-images-with-squoosh-to-improve-website-performance/).
 
 ### Header Options
-When you scroll down in the same section from the theme customizer (Header Image), you will see that there are options to customize the header image. You can choose to change the image position, change the image height, display paralax effect and image overlay.
+When you scroll down in the same section from the theme customizer (Header Image), you will see that there are options to customize the header image and the call to action button in the header of the homepage. You can choose to change the image position, change the image height, display paralax effect and image overlay.
 
-### Call to Action
 The call to action banner is the big orange button on the header of the homepage. You can change the url and the text of the header banner from the Call to Action section in the theme customizer. You can also hide the button if you leave any of the two fields empty.
 
 ### Page Layout
@@ -108,8 +106,8 @@ You can add as many social icons as you wish. For more information check Dashico
 ### Homepage Settings
 Optionally specify a static front page.
 
-### Dark Mode
-Protect your visitors' eyes and help them spend more time on your website by allowing them to switch between day and night mode (light and dark layout). To change to dark mode, you need to click on the toggle button in the theme footer. You can also change the background color and add custom css to change the main colors of the night mode. For example, if you want to change the link colors, you can use the following css:
+### Night Mode
+Protect your visitors' eyes and help them spend more time on your website by allowing them to switch between day and night mode (light and dark layout). To change to dark mode, you just need to click on the toggle button in the theme footer. You can change the background color and add custom css to further customize the colors of the night mode. For example, if you want to change the link colors, you can use the following css:
 
     body.dark-mode a {
 	    color: rgba(102, 222, 209, .8) !important;

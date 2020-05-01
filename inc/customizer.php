@@ -19,7 +19,7 @@ require get_template_directory() . '/inc/sanitization-functions.php';
 
 function highstarter_customize_colors($wp_customize) {
 
-    $wp_customize->get_section('colors')->description = esc_html__( 'Customze the colors of the light theme mode. To customize the dark theme mode, you need to add custom css in the the additional css tab. For more information, please refer to the theme documentation.', 'highstarter');
+    $wp_customize->get_section('colors')->description = esc_html__( 'Customze the colors of the light theme mode. To customize the dark theme mode, go to the Night Mode section.', 'highstarter');
 
     //Primary menu background color
     $wp_customize->add_setting('header_background_color', array(
@@ -28,16 +28,6 @@ function highstarter_customize_colors($wp_customize) {
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_background_color', array(
         'label' => esc_html__('Header Background Color', 'highstarter'),
-        'section' => 'colors',
-    )));
-
-    //Site title color
-    $wp_customize->add_setting('site_title_textcolor', array(
-        'default' => "#fff",
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'site_title_textcolor', array(
-        'label' => esc_html__('Site Title Color', 'highstarter'),
         'section' => 'colors',
     )));
 
@@ -53,12 +43,12 @@ function highstarter_customize_colors($wp_customize) {
     )));
 
     // Headings color
-    $wp_customize->add_setting('header_textcolor', array(
+    $wp_customize->add_setting('headings_textcolor', array(
         'default' => "#333",
-        'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'sanitize_hex_color'
     ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_textcolor', array(
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'headings_textcolor', array(
         'label' => esc_html__('Headings Text Color', 'highstarter'),
         'section' => 'colors',
     )));
@@ -77,27 +67,34 @@ function highstarter_customize_colors($wp_customize) {
 }
 add_action('customize_register', 'highstarter_customize_colors');
 
-function highstarter_customize_colors_css() { ?>
+function highstarter_customize_colors_css() { 
+
+    $header_text_color = get_theme_mod('header_textcolor');
+
+    $default_text_color = 'fff'; ?>
+
 <style type="text/css">
 body h1,
 body h2,
 body h3 {
-    color: #<?php echo esc_attr(get_theme_mod('header_textcolor', "#333"));
+    color: <?php echo esc_attr(get_theme_mod('headings_textcolor', '#333'));
     ?>;
 }
 body a {
-    color: <?php echo esc_attr(get_theme_mod('link_textcolor', '007bff'));
+    color: <?php echo esc_attr(get_theme_mod('link_textcolor', '#007bff'));
     ?>;
 }
 .site-header-wrapper {
     background-color: <?php echo esc_attr(get_theme_mod('header_background_color', "#fff"));
     ?>;
 }
+<?php if( $header_text_color) : ?>
 .hero-text .site-title a,
 .hero-text p {
-    color: <?php echo esc_attr(get_theme_mod('site_title_textcolor', "#fff"));
+    color: #<?php echo esc_attr(get_theme_mod('header_textcolor', 'fff'));
     ?>;
 }
+<?php endif; ?>
 button,
 a.button,
 a.button:visited,
@@ -108,6 +105,7 @@ input[type="submit"] {
     ?> !important;
 }
 </style>
+
 <?php
 }
 add_action('wp_footer', 'highstarter_customize_colors_css');
@@ -119,54 +117,6 @@ add_action('wp_footer', 'highstarter_customize_colors_css');
 
 function highstarter_customize_register_banner_and_header($wp_customize) {
 
-    $wp_customize->add_section('banner_options', array(
-        'title' => esc_html__('Call to Action', 'highstarter'),
-        'description' => esc_html__('Customize the button on the header of the Homepage.
-        You can change the default text of the button, add link to it or completely hide it.', 'highstarter'),
-    ));
-
-    /**
-     * CALL TO ACTION
-     */
-
-    //Banner label
-    $wp_customize->add_setting(
-        'banner_label',
-        array(
-            'default' => esc_html__('Get Started', 'highstarter'),
-            'sanitize_callback' => 'sanitize_text_field',
-        )
-    );
-
-    $wp_customize->add_control(
-        'banner_label',
-        array(
-            'label' => esc_html__('Banner Text', 'highstarter'),
-            'section' => 'banner_options',
-            'description' => esc_html__('Change the default text of the button.', 'highstarter'),
-            'type' => 'text',
-        )
-    );
-
-    //Banner Link
-    $wp_customize->add_setting(
-        'banner_link',
-        array(
-            'default' => '#',
-            'sanitize_callback' => 'esc_url_raw',
-        )
-    );
-
-    $wp_customize->add_control(
-        'banner_link',
-        array(
-            'label' => esc_html__('Banner Link', 'highstarter'),
-            'section' => 'banner_options',
-            'description' => esc_html__('Add link to the button. You can link it to the about page or the Contact page or a specific section from the Homepage.', 'highstarter'),
-            'type' => 'url',
-        )
-    );
-
     /**
      * HEADER IMAGE OPTIONS
      * 
@@ -174,7 +124,7 @@ function highstarter_customize_register_banner_and_header($wp_customize) {
 
     $wp_customize->add_section('header_options', array(
         'title' => esc_html__('Header Options', 'highstarter'),
-        'description' => esc_html__('Customize the header image to taste with the options below. Change width, height and position of the image. Choose to add or remove the parallax effect of the image.', 'highstarter'),
+        'description' => esc_html__('Customize the header image to taste with the options below. Change width, height and position of the image. Choose to add or remove the parallax effect on the image. Customize the call to action button on the header of the Homepage.', 'highstarter'),
         'priority' => 99,
     ));
 
@@ -297,10 +247,51 @@ function highstarter_customize_register_banner_and_header($wp_customize) {
         )
     );
 
+    /**
+     * CALL TO ACTION
+     */
+
+    //Banner label
+    $wp_customize->add_setting(
+        'banner_label',
+        array(
+            'default' => esc_html__('Get Started', 'highstarter'),
+            'sanitize_callback' => 'sanitize_text_field',
+        )
+    );
+
+    $wp_customize->add_control(
+        'banner_label',
+        array(
+            'label' => esc_html__('Banner Text', 'highstarter'),
+            'section' => 'header_options',
+            'description' => esc_html__('Change the default text of the button.', 'highstarter'),
+            'type' => 'text',
+        )
+    );
+
+    //Banner Link
+    $wp_customize->add_setting(
+        'banner_link',
+        array(
+            'default' => '#',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+
+    $wp_customize->add_control(
+        'banner_link',
+        array(
+            'label' => esc_html__('Banner Link', 'highstarter'),
+            'section' => 'header_options',
+            'description' => esc_html__('Add link to the button. You can link it to the About page or the Contact page or to a specific section from the Homepage.', 'highstarter'),
+            'type' => 'url',
+        )
+    );
+
 }
 
 add_action('customize_register', 'highstarter_customize_register_banner_and_header');
-
 
 /*
  **Allow users to change page layout (Right sidebar or Fullwidth) via Theme Customizer
@@ -361,3 +352,74 @@ function highstarter_customize_css() {
     <?php endif;
 }
 add_action('wp_footer', 'highstarter_customize_css');
+
+/*
+ * Night Mode
+ * @since version 2.0
+ */
+
+function highstarter_night_mode_customizer($wp_customize) {
+
+    $wp_customize->add_section('night_mode', array(
+        'title' => esc_html(__('Night Mode', 'highstarter')),
+        'description' => esc_html(__('Customize the dark theme mode. For additional customizations, you can use the "dark-mode" body class and add the code to the Additional Css tab.', 'highstarter' )
+	)));
+	
+	//Enable Dark Mode 
+	$wp_customize->add_setting(
+        'enable_dark_mode',
+        array(
+			'default' => 1,
+			'sanitize_callback' => 'sanitize_text_field',
+        )
+    );
+
+    $wp_customize->add_control(
+        'enable_dark_mode',
+        array(
+            'label' => esc_html__('Enable Dark Mode', 'highstarter'),
+            'section' => 'night_mode',
+            'description' => esc_html__('Enable site visitors to switch to dark theme mode.', 'highstarter'),
+            'type' => 'checkbox',
+        )
+	);
+	
+	//Change Dark Mode Colors
+
+	$wp_customize->add_setting('dark_mode_background_color', array(
+		'default'        => '#262626',
+		'sanitize_callback' => 'sanitize_hex_color',
+	   ) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'dark_mode_background_color', array(
+	   'label'   => __('Background', 'highstarter'),
+	   'section' => 'night_mode'
+		)));
+}
+
+add_action('customize_register', 'highstarter_night_mode_customizer');
+
+function highstarter_customize_night_mode_css() {
+
+	$isDarkMode = get_theme_mod('enable_dark_mode', 1)? 'block': 'none';
+    
+    ?>
+	<style type="text/css">
+    body.dark-mode header, body.dark-mode main *, 
+    body.dark-mode main .hentry, body.dark-mode main .sidebar-box,
+    body.dark-mode .site-header-wrapper,
+    body.dark-mode .main-navigation ul,
+    body.dark-mode .main-navigation ul ul {
+        background-color: <?php echo esc_attr(get_theme_mod('dark_mode_background_color', "#262626")); ?>;
+    }
+    body.dark-mode form#commentform, body.dark-mode .comment-body {
+        background-color: <?php echo esc_attr(get_theme_mod('dark_mode_background_color', "#262626")); ?> !important;
+    }
+	.wpnm-button{
+		display: <?php echo esc_attr($isDarkMode);?>
+	}
+	</style> 
+	<?php
+
+}
+
+add_action( 'wp_footer', 'highstarter_customize_night_mode_css');

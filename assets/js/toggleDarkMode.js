@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-	var body = document.getElementsByTagName("body")[0]
+	var body = document.body;
 	var switcher = document.getElementsByClassName('wpnm-button')[0];
-
+	
 	//Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
 	switcher.addEventListener("click", function() {
-
 		this.classList.toggle('active');
-
 		//If dark mode is selected
 		if (this.classList.contains('active')) {
 			body.classList.add('dark-mode');
@@ -18,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 				localStorage.removeItem('highstarterNightMode');
 			}, 100);
 		}
-
 	})
 
 	//Check Storage. Keep user preference on page reload
@@ -26,5 +22,4 @@ document.addEventListener('DOMContentLoaded', function() {
 		body.classList.add('dark-mode');
 		switcher.classList.add('active');
 	}
-
 })
