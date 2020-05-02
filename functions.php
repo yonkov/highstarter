@@ -86,7 +86,7 @@ function highstarter_styles() {
     //Toggle Dark Theme Mode
     wp_enqueue_script( 'highstarter-dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(),'',true);
 	//Theme stylesheet.
-    wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.4' );
+    wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.5' );
 }
 
 add_action( 'wp_enqueue_scripts', 'highstarter_styles', 99 );
@@ -100,7 +100,7 @@ function highstarter_fonts() {
     wp_enqueue_style( 'dashicons' );
     //Add google fonts 
     wp_enqueue_style( 'Merriweather', '//fonts.googleapis.com/css?family=Merriweather&display=swap' ); 
-	wp_enqueue_style( 'OpenSans', '//fonts.googleapis.com/css?family=Open+Sans' ); 
+	wp_enqueue_style( 'OpenSans', '//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap' ); 
 }
 
 add_action( 'wp_footer', 'highstarter_fonts' ); 

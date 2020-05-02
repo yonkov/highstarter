@@ -69,9 +69,7 @@ add_action('customize_register', 'highstarter_customize_colors');
 
 function highstarter_customize_colors_css() { 
 
-    $header_text_color = get_theme_mod('header_textcolor');
-
-    $default_text_color = 'fff'; ?>
+    $header_text_color = get_theme_mod('header_textcolor'); ?>
 
 <style type="text/css">
 body h1,
@@ -88,9 +86,9 @@ body a {
     background-color: <?php echo esc_attr(get_theme_mod('header_background_color', "#fff"));
     ?>;
 }
-<?php if( $header_text_color) : ?>
+<?php if($header_text_color) : ?>
 .hero-text .site-title a,
-.hero-text p {
+header .site-description {
     color: #<?php echo esc_attr(get_theme_mod('header_textcolor', 'fff'));
     ?>;
 }

@@ -47,7 +47,7 @@ if (post_password_required()) {
     <?php endif;
 
     comment_form(array(
-        'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title">',
+        'title_reply_before' => '<h3 id="reply-title" class="comment-reply-title mb-5">',
         'title_reply_after' => '</h3>',
         'title_reply' => __('Leave a Comment', 'highstarter'),
         'class_submit' => 'btn btn-primary',

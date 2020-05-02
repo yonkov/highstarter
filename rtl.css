@@ -41,20 +41,20 @@ a img.alignleft {
 /* Theme default styles */
 
 ul {
-    padding-right: 15px;
+    padding-right: 15px
 }
 
 blockquote {
     border-right: 5px solid rgba(121, 121, 253, 0.5);
-    border-left: none;
+    border-left: none
 }
 
 .breadcrumb {
-    text-align: right;
+    text-align: right
 }
 
 .site-logo-wrapper {
-    float: right;
+    float: right
 }
 
 .sidebar-box>ul {
@@ -63,13 +63,13 @@ blockquote {
 
 .nav-previous,
 .post-navigation .nav-previous {
-    float: right;
+    float: right
 }
 
 .nav-next,
 .post-navigation .nav-next {
     float: left;
-    text-align: left;
+    text-align: left
 }
 
 /* Menu */
@@ -85,7 +85,7 @@ blockquote {
     }
 
     .main-navigation li {
-        float: right;
+        float: right
     }
 
     .main-navigation ul ul {
@@ -93,20 +93,20 @@ blockquote {
     }
 
     .main-navigation ul ul ul {
-        left: 999em;
+        left: 999em
     }
 
     .main-navigation li:hover>ul,
     .main-navigation li.focus>ul,
     .main-navigation li.show>ul {
-        left: auto;
+        left: auto
     }
     /* Keyboard navigation */
     .main-navigation ul ul li:hover>ul,
     .main-navigation ul ul li.focus>ul,
     .main-navigation ul ul li.highlight>ul {
         left: auto;
-        right: 100%;
+        right: 100%
     }
 }
 
@@ -122,25 +122,25 @@ blockquote {
       border-right: 4px solid rgba(0, 0, 0, 0);
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      transform: translateY(-50%)
   }
   
   .main-navigation .menu-item-has-children > a::after{
-      display: none !important;
+      display: none !important
   }
 
 /* Mobile menu */
 
 .menu-toggle {
     left: 10px;
-    right: auto;
+    right: auto
 }
 
 /* Add arrows for menu items that has children menu items */
 
 .main-navigation .menu-item-has-children>a::after {
     left: 4px;
-    right: 0;
+    right: 0
   }
   
   .main-navigation .sub-menu .menu-item-has-children>a::after {
@@ -148,7 +148,7 @@ blockquote {
     left: 10px;
     right: auto;
     border-right: 4px solid #181818;
-    border-left: none;
+    border-left: none
   }
 
   /* Dark Mode */
@@ -157,19 +157,21 @@ blockquote {
 
 @media (min-width: 40.063em) {
     body.dark-mode .hentry {
-      padding: 1.5em 0 0 3.75em;
+      padding: 1.5em 0 0 3.75em
     }
-    body.dark-mode #commentform {
-      padding: 0 0rem 0 3rem;
+    body.dark-mode #commentform, body.dark-mode .comment-body {
+      padding: 0 0rem 0 3rem
+    }
+    .dark-mode .navigation.post-navigation {
+        padding-left: 3.75em;
+        padding-right: 0
     }
   }
 
   body.dark-mode .main-navigation .sub-menu .menu-item-has-children > a::after {
-
     border-right: 4px solid #fff;
     border-top: 4px solid transparent;
-    border-left: 4px solid transparent;
-
+    border-left: 4px solid transparent
 }
 
 body.dark-mode .main-navigation .menu-item-has-children > a::before {
@@ -184,32 +186,33 @@ body.dark-mode .main-navigation .menu-item-has-children > a::before {
     border-left: 4px solid transparent;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-50%)
   }
 
   /* Homepage */
+
   .post-title {
     padding-right: 15px
   }
 
   .site-footer section > ul, .site-footer section div > ul {
-    padding-right: 0em;
+    padding-right: 0em
   }
 
   .comment-list li .vcard img {
-    margin-left: 5px;
+    margin-left: 5px
   }
 
   .comment-list .children {
     float: right;
-    padding: 50px 40px 0 0px;
+    padding: 50px 40px 0 0px
   }
   
   .comment-list li {
-    float: right;
+    float: right
   }
 
   /* Headings */
   .main-content h2, .main-content h1 {
-    text-align: right;
+    text-align: right
   }
