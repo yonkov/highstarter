@@ -15,3 +15,13 @@ function highstarter_sanitize_checkbox($checked) {
     // Boolean check.
     return ((isset($checked) && true == $checked) ? true : false);
 }
+
+function highstarter_sanitize_number_absint(){
+
+// Ensure $number is an absolute integer (whole number, zero or greater).
+$number = absint( $number );
+
+// If the input is an absolute integer, return it; otherwise, return the default
+//return ( $number ? $number : $setting->default );    
+
+}

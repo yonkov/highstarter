@@ -15,20 +15,21 @@
     <div class="image-overlay">
         <div class="hero-text">
         <!--Site Title and Description-->
+        <?php if (display_header_text()==true) : ?> 
             <h1 class="site-title">
                 <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                     <?php bloginfo('name');?>
                 </a>
             </h1>
-    <?php $highstarter_description = get_bloginfo('description', 'display');
-    
-    if ($highstarter_description || is_customize_preview()): ?>
-        <p class="site-description">
-            <?php echo $highstarter_description; ?>
-        </p>
+        <?php $highstarter_description = get_bloginfo('description', 'display');
+            if ($highstarter_description || is_customize_preview()): ?>
+                <p class="site-description">
+                    <?php echo $highstarter_description; ?>
+                </p>
+            <?php endif;
+        endif; ?>
         <!--Call to action-->
         <?php highstarter_call_to_action() ?>
         </div>
-    <?php endif;?>
     </div>
 </div>

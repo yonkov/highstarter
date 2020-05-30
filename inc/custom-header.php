@@ -14,6 +14,15 @@
  *
  * @uses highstarter_header_style()
  */
+
+register_default_headers( array(
+    'default-image' => array(
+        'url'           => get_template_directory_uri() . '/assets/images/2500X750.jpg',
+        'thumbnail_url' => get_template_directory_uri() . '/assets/images/2500X750.jpg',
+        'description'   => __( 'Default Header Image', 'highstarter' )
+    ),
+) );
+
 function highstarter_custom_header_setup() {
     add_theme_support('custom-header', apply_filters('highstarter_custom_header_args', array(
         'default-image'      => get_template_directory_uri() . '/assets/images/2500X750.jpg',
@@ -31,6 +40,7 @@ if (! function_exists('highstarter_header_style')) :
     //Style the header image from the theme customizer.
     function highstarter_header_style() {
         $height = get_theme_mod('header_image_height', '380px');
+        $trimmed_height = str_replace(' ', '', $height);
         $repeat = get_theme_mod('header-background-repeat', 'no-repeat');
         $size = get_theme_mod('header-background-size', 'cover');
         $position = get_theme_mod('header-background-position', 'center');
@@ -38,7 +48,7 @@ if (! function_exists('highstarter_header_style')) :
         $overlay  = get_theme_mod('cover_template_overlay_opacity', '1'); ?>
 		<style type="text/css">
 		.image-overlay {
-			min-height: <?php echo esc_attr($height) ?>;
+			min-height: <?php echo esc_attr( $trimmed_height) ?>;
 		}
 
 		.image-overlay {

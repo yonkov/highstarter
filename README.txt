@@ -4,8 +4,8 @@ Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 2.0.1
-Stable tag: 2.0.1
+Version: 2.0.3
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -69,6 +69,12 @@ https://wordpress.org/themes/twentyseventeen/,
 License: GNU General Public License v2 or later
 
 == Changelog ==
+
+=2.0.3 =
+* Fix textdomains.
+
+=2.0.2 =
+* Fix suggested header image. Fix call to action button disappearing. Improve data validation.
 
 =2.0.1 =
 * Fix fonts and header text color in the customizer

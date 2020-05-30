@@ -179,7 +179,7 @@ function highstarter_customize_register_banner_and_header($wp_customize) {
         'header_image_height',
         array(
             'default' => '380px',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'sanitize_text_field'
         )
     );
 
@@ -345,6 +345,9 @@ function highstarter_customize_css() {
     .sidebar {
         display: none;
     }
+    body .container {
+        max-width: 980px;
+    }
     </style>
 
     <?php endif;
@@ -377,7 +380,7 @@ function highstarter_night_mode_customizer($wp_customize) {
         array(
             'label' => esc_html__('Enable Dark Mode', 'highstarter'),
             'section' => 'night_mode',
-            'description' => esc_html__('Enable site visitors to switch to dark theme mode.', 'highstarter'),
+            'description' => esc_html__('Enable site visitors to switch to dark theme mode in the theme footer.', 'highstarter'),
             'type' => 'checkbox',
         )
 	);
