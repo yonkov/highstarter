@@ -92,6 +92,7 @@ header .site-description {
     color: #<?php echo esc_attr(get_theme_mod('header_textcolor', 'fff'));
     ?>;
 }
+
 <?php endif; ?>
 button,
 a.button,
@@ -106,7 +107,7 @@ input[type="submit"] {
 
 <?php
 }
-add_action('wp_footer', 'highstarter_customize_colors_css');
+add_action('wp_head', 'highstarter_customize_colors_css');
 
 /*
  * Allow users to change or remove the call to action on the Homepage 
@@ -122,7 +123,7 @@ function highstarter_customize_register_banner_and_header($wp_customize) {
 
     $wp_customize->add_section('header_options', array(
         'title' => esc_html__('Header Options', 'highstarter'),
-        'description' => esc_html__('Customize the header image to taste with the options below. Change width, height and position of the image. Choose to add or remove the parallax effect on the image. Customize the call to action button on the header of the Homepage.', 'highstarter'),
+        'description' => esc_html__('Customize the header image to taste with the options below. Change width, height and position of the image. Choose to add or remove the parallax effect on the image. Customize the call to action button on the header of the Homepage. Please note: for these options to work, make sure that a header image is specified in the "Header Image" section.', 'highstarter'),
         'priority' => 99,
     ));
 
@@ -415,9 +416,6 @@ body.dark-mode .main-navigation ul ul {
 }
 body.dark-mode form#commentform, body.dark-mode .comment-body {
     background-color: <?php echo esc_attr(get_theme_mod('dark_mode_background_color', "#262626")); ?> !important;
-}
-.wpnm-button{
-	display: <?php echo esc_attr($isDarkMode);?>
 }
 </style>
 

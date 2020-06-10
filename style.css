@@ -7,7 +7,7 @@ Description: Highstarter is a lightweight starter theme without any libraries or
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 2.0.3
+Version: 2.0.4
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -444,6 +444,12 @@ body.dark-mode .main-navigation .sub-menu .menu-item-has-children > a::after {
   background-color: #fff
 }
 
+/* No header image title */
+.dark-mode .no-header-image .site-description,
+.dark-mode .no-header-image .site-title a {
+  color: #fff;
+}
+
 /* Headings */
 
 .dark-mode h1, 
@@ -501,8 +507,7 @@ body.dark-mode .main-navigation .sub-menu .menu-item-has-children > a::after {
 
 /* Sidebar */
 
-.dark-mode .sidebar-box .heading, 
-.dark-mode .site-footer {
+.dark-mode .sidebar-box .heading{
   border-bottom: 1px solid #666
 }
 
@@ -622,7 +627,7 @@ header {
   width: 100%;
   z-index: 5;
   font-weight: 400;
-  background: #fff !important
+  background: #fff;
 }
 
 pre{
@@ -660,6 +665,16 @@ pre{
 
 .site-description {
  color: #fff
+}
+
+.no-header-image .site-description,
+.no-header-image .site-title a {
+  color: #333;
+  margin-bottom: 0
+}
+
+.no-header-image .site-title a {
+  color: #333;
 }
 
 /* Mobile menu */
@@ -1007,6 +1022,10 @@ pre{
 
 .post-thumbnail {
   margin-bottom: 20px
+}
+
+.post-thumbnail img {
+  height: auto;
 }
 
 .post .entry-title {
