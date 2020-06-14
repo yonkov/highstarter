@@ -46,7 +46,7 @@ if (! function_exists('highstarter_header_style')) :
         $position = get_theme_mod('header-background-position', 'center');
         $attachment = get_theme_mod('header-background-attachment', 1)? 'fixed': 'scroll';
         $overlay  = get_theme_mod('cover_template_overlay_opacity', '1'); ?>
-		<style type="text/css">
+	    <style type="text/css">
 		.image-overlay {
 			min-height: <?php echo esc_attr( $trimmed_height) ?>;
 		}
@@ -61,9 +61,29 @@ if (! function_exists('highstarter_header_style')) :
 			background-size: <?php echo esc_attr($size); ?>;
 			background-position: <?php echo esc_attr($position); ?>;
 			background-attachment: <?php echo esc_attr($attachment); ?>;
-		}
+        }
+        <?php else : ?>
+        .dark-mode .no-header-image .site-description,
+        .dark-mode .no-header-image .site-title a {
+            color: #fff;
+        }
+        .no-header-image .site-description,
+        .no-header-image .site-title a {
+            color: #333;
+            margin-bottom: 0
+        }
+        .no-header-image .site-title {
+            padding-top: .25em;
+        }
+        .no-header-image .site-description {
+            padding-bottom: .5em;
+        }
+
+        .no-header-image .site-title a {
+            font-size: 38px;
+        }
 		<?php endif; ?>
-		</style>
+	    </style>
 	<?php
     }
 endif;

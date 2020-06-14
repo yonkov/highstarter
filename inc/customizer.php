@@ -300,7 +300,7 @@ function highstarter_register_theme_customizer($wp_customize) {
 
     $wp_customize->add_section('layout_options', array(
         'title' => esc_html__('Page Layout', 'highstarter'),
-        'description' => esc_html__('Change the layout of the whole website. You can choose to display or to hide the right sidebar.', 'highstarter'),
+        'description' => esc_html__('Change the layout of the whole website. You can choose to display right sidebar, left sidebar or hide the sidebar completely.', 'highstarter'),
     ));
 
     $wp_customize->add_setting('page_layout', array(
@@ -319,6 +319,7 @@ function highstarter_register_theme_customizer($wp_customize) {
             'choices' => array(
                 'one' => esc_html__('Right Sidebar', 'highstarter'),
                 'two' => esc_html__('Full-width', 'highstarter'),
+                'three' => esc_html__('Left Sidebar', 'highstarter')
                 ),
             )
         )
@@ -333,27 +334,38 @@ function highstarter_customize_css() {
 
     if ($layout == 'two'): ?>
 
-    <style type="text/css">
+<style type="text/css">
     .main-content {
         max-width: 100% !important;
         flex: 100% !important;
     }
-
     .blog-entries .blog-entry img {
         width: 100% !important;
     }
-
     .sidebar {
         display: none;
     }
     body .container {
         max-width: 980px;
     }
-    </style>
+</style>
+
+    <?php elseif ($layout =='three') : ?>
+    
+<style type="text/css">
+    .blog-entries {
+        flex-direction: row-reverse;
+    }
+    @media (min-width: 60em){
+	    .sidebar-wrapper {
+		    padding-left: 0;
+	    }	
+    }
+</style>  
 
     <?php endif;
 }
-add_action('wp_footer', 'highstarter_customize_css');
+add_action('wp_head', 'highstarter_customize_css');
 
 /*
  * Night Mode

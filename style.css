@@ -3,16 +3,16 @@ Theme Name: Highstarter
 Theme URI: https://github.com/yonkov/highstarter/
 Author: Atanas Yonkov
 Author URI: http://yonkov.github.io/
-Description: Highstarter is a lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. The theme is very fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 33KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. The visitors can choose between light and dark (night) mode and change their preferences with one click. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor. How to set it up: https://github.com/yonkov/highstarter/
+Description: Highstarter is a lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. The theme is very fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 33KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar or full-width layout. The visitors can choose between light and dark (night) mode and change their preferences with one click. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor. How to set it up: https://github.com/yonkov/highstarter/#readme
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 2.0.4
+Version: 2.0.6
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Tags: portfolio, blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
+Tags: portfolio, blog, one-column, two-columns, right-sidebar, left-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
 Text Domain: highstarter
 
 This theme, like WordPress, is licensed under the GPL.
@@ -255,8 +255,13 @@ table, th, td {
   border: 1px solid #333
 }
 
+strong {
+  font-weight: 700;
+}
+
 .site-title {
-  font-family: "Roboto", sans-serif
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 .site-logo-wrapper {
@@ -442,12 +447,6 @@ body.dark-mode .main-navigation .sub-menu .menu-item-has-children > a::after {
 
 .dark-mode .menu-toggle div {
   background-color: #fff
-}
-
-/* No header image title */
-.dark-mode .no-header-image .site-description,
-.dark-mode .no-header-image .site-title a {
-  color: #fff;
 }
 
 /* Headings */
@@ -652,7 +651,7 @@ pre{
 
 .site-title a {
   color: #fff;
-  font-size: 70px
+  font-size: 55px
 }
 
 @media (max-width: 991.98px) {
@@ -667,26 +666,16 @@ pre{
  color: #fff
 }
 
-.no-header-image .site-description,
-.no-header-image .site-title a {
-  color: #333;
-  margin-bottom: 0
-}
-
-.no-header-image .site-title a {
-  color: #333;
-}
-
 /* Mobile menu */
 
-@media (min-width: 40.063em) {
+@media (min-width: 65.063em) {
   .menu-toggle {
     display: none
   }
 }
 
 .menu-toggle {
-  width: 3.85rem;
+  width: 3.9rem;
   cursor: pointer;
   display: none;
   position: absolute;
@@ -695,7 +684,7 @@ pre{
   display: block;
   z-index: 99999;
   background-color: transparent !important;
-  padding: 0 0 0 .77em
+  padding: 0 0 0 .83em
 }
 
 /* Target Chrome */
@@ -744,7 +733,7 @@ pre{
   width: 100%
 }
 
-@media (max-width: 40em) {
+@media (max-width: 65.063em) {
   .main-navigation-container {
     float: none;
     clear: both;
@@ -759,7 +748,7 @@ pre{
   position: relative
 }
 
-@media (min-width: 40.063em) {
+@media (min-width: 65.063em) {
   .main-navigation {
     display: table;
     margin: 0 auto
@@ -781,7 +770,7 @@ pre{
   clear: both
 }
 
-@media (min-width: 40.063em) {
+@media (min-width: 65.063em) {
   .main-navigation.open {
     background-color: transparent
   }
@@ -821,7 +810,7 @@ pre{
   display: block
 }
 
-@media (min-width: 40.063em) {
+@media (min-width: 65.063em) {
   .main-navigation ul ul {
     position: absolute;
     left: -999em;
@@ -856,13 +845,13 @@ pre{
   padding: 0
 }
 
-@media (min-width: 40.063em) {
+@media (min-width: 65.063em) {
   .main-navigation li li {
     text-indent: .5rem
   }
 }
 
-@media (max-width: 40.062em){
+@media (max-width: 65.062em){
   .main-navigation li li {
     text-indent: 1.25rem
   }
@@ -879,7 +868,7 @@ pre{
   padding: 0
 }
 
-@media (min-width: 40.063em) {
+@media (min-width: 65.063em) {
   .main-navigation li {
     position: relative;
     float: left
@@ -938,7 +927,7 @@ pre{
   border-bottom: 4px solid transparent
 }
 
-@media (min-width: 40.063em) {
+@media (min-width: 65.063em) {
 
   .main-navigation .menu-item-has-children>a::after,
   .main-navigation .sub-menu .menu-item-has-children>a::after {
@@ -967,7 +956,8 @@ pre{
 
 @media (min-width: 600px) and (max-width: 992px) {
   .site-section {
-    display: inline-block
+    display: inline-block;
+    width: 100%
   }
 }
 
@@ -982,10 +972,6 @@ pre{
   bottom: 1em;
   right: 0;
   left: 0
-}
-
-.hero-text .site-title a {
-  font-size: 55px
 }
 
 @media (max-width:520px) {
@@ -1121,7 +1107,7 @@ input[type="submit"] {
   color: #ffffff;
   line-height: 1;
   margin-bottom: .5em;
-  padding: .75em 1em;
+  padding: .75em;
   white-space: nowrap
 }
 
@@ -1228,8 +1214,8 @@ form#commentform,
   max-width: 1100px
 }
 
-.site-footer .widget-column.footer-widget-2 div input:nth-child(2) {
-  width: 60%
+.site-footer input[name="s"] {
+  width: 55%
 }
 
 .comment-content {
@@ -1536,6 +1522,13 @@ section[id*="recent-comments"] li {
   letter-spacing: .2em
 }
 
+@media screen and (min-width: 400px){
+  .footer-meta {
+    margin-left: 15px;
+    margin-right: -15px;
+  }
+}
+
 .site-footer p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px
@@ -1562,6 +1555,7 @@ section[id*="recent-comments"] li {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+  align-items: center;
   padding-top: 3em
 }
 

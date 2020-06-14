@@ -74,7 +74,7 @@ When you scroll down in the same section from the theme customizer (Header Image
 The call to action banner is the big orange button on the header of the homepage. You can change the url and the text of the header banner from the Call to Action section in the theme customizer. You can also hide the button if you leave any of the two fields empty.
 
 ### Page Layout
-Choose between page layout with right sidebar or full-width layout with a single click.
+Choose between page layout with right sidebar, left sidebar or full-width layout with a single click.
 
 ### Colors
 Change the colors of the light theme such as the header, the headings, the links, the buttons and the primary menu text items.
