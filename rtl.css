@@ -216,3 +216,9 @@ body.dark-mode .main-navigation .menu-item-has-children > a::before {
   .main-content h2, .main-content h1 {
     text-align: right
   }
+
+  /* Footer */
+
+  .footer-meta {
+    margin-right: 15px;
+}

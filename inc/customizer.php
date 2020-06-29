@@ -356,11 +356,19 @@ function highstarter_customize_css() {
     .blog-entries {
         flex-direction: row-reverse;
     }
+    <?php if (!is_rtl()) : ?>
     @media (min-width: 60em){
-	    .sidebar-wrapper {
+	    .sidebar-wrapper, .dark-mode .sidebar-box {
 		    padding-left: 0;
 	    }	
     }
+    <?php else : ?>
+    @media (min-width: 60em){
+        .sidebar-wrapper, .dark-mode .sidebar-box {
+		    padding-right: 0;
+	    }
+    }   
+    <?php endif; ?>
 </style>  
 
     <?php endif;

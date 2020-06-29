@@ -4,8 +4,8 @@ Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.4
 Requires PHP: 5.2.4
-Version: 2.0.6
-Stable tag: 2.0.6
+Version: 2.0.7
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, left-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -69,6 +69,9 @@ https://wordpress.org/themes/twentyseventeen/,
 License: GNU General Public License v2 or later
 
 == Changelog ==
+
+=2.0.7 =
+* Fix rtl layout for left sidebar and footer credits.
 
 =2.0.6 =
 * Add left sidebar option in theme customizer. Improve responsive menu and main content layout for tablet.
