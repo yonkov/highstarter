@@ -86,7 +86,7 @@ function highstarter_styles() {
     //Toggle Dark Theme Mode
     wp_enqueue_script( 'highstarter-dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(),'',true);
 	//Theme stylesheet.
-    wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.6' );
+    wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '1.0.7' );
 }
 
 add_action( 'wp_enqueue_scripts', 'highstarter_styles', 99 );
@@ -217,15 +217,14 @@ function highstarter_the_posts_navigation() {
 }
 
 function highstarter_thumbnail($size = '') {
-
     if (has_post_thumbnail()) {?>
     <div class="post-thumbnail">
         <?php if (!is_single()): ?>
         <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
-            <?php the_post_thumbnail(null, $size);?>
+            <?php the_post_thumbnail($size);?>
         </a>
         <?php else: ?>
-        <?php the_post_thumbnail(null, $size);?>
+        <?php the_post_thumbnail($size);?>
         <?php endif;?>
     </div><!-- .post-thumbnail -->
     <?php
@@ -375,3 +374,18 @@ function highstarter_dark_mode() {
     <?php
 }
 add_action('wp_body_open', 'highstarter_dark_mode');
+
+/** 
+ * Facebook Open Graph
+ * @since 2.0.8
+ * Display the featured post image as og:image on the single post page
+ * @link https://stackoverflow.com/questions/28735174/wordpress-ogimage-featured-image
+ */
+
+function highstarter_fb_open_graph() {	
+	if( is_single() && has_post_thumbnail() ) {
+        echo '<meta property="og:image" content="'. esc_attr(get_the_post_thumbnail_url(get_the_ID()))   .'" />';
+    }
+}
+
+add_action('wp_head', 'highstarter_fb_open_graph');

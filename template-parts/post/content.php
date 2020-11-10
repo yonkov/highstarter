@@ -16,7 +16,7 @@
 
 <article <?php post_class(); ?>>
 
-	<?php highstarter_thumbnail(); ?>
+	<?php highstarter_thumbnail('large'); ?>
 
 	<div class="entry-header">
         <div class="breadcrumb"><?php highstarter_breadcrumbs();?></div>
