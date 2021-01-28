@@ -18,18 +18,18 @@ get_header(); ?>
     <div class="container">
         <div class="row blog-entries">
             <div class="main-content">
+            <article class="hentry">
                 <h2 class="mb-4"><?php _e( 'Oops! That page can&rsquo;t be found.', 'highstarter' ); ?></h2>
 
                 <div class="row">
-                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'highstarter' ); ?>
-                    </p>
-
+                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'highstarter' ); ?></p>
                     <?php get_search_form(); ?>
-
                 </div>
-				</div>
+            </article>
+
+			</div>
 				
-                <?php get_sidebar(); ?>
+            <?php get_sidebar(); ?>
         </div>
 </section>
 </div>

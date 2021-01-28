@@ -5,9 +5,9 @@ Author: Atanas Yonkov
 Author URI: http://yonkov.github.io/
 Description: Highstarter is a lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. The theme is very fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 33KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar, left sidebar or full-width layout. The visitors can choose between light and dark (night) mode and change their preferences with one click. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor. How to set it up: https://github.com/yonkov/highstarter/#readme
 Requires at least: WordPress 4.4
-Tested up to: WordPress 5.4
+Tested up to: WordPress 5.6
 Requires PHP: 5.2.4
-Version: 2.0.9
+Version: 2.1.0
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1134,14 +1134,8 @@ input[type="submit"]:hover {
   z-index: 0
 }
 
-@media (min-width: 40em){
-  .sidebar-box .searchform input[type="text"]{
-    width: 55%
-  }
-}
-
 @media (max-width: 390px){
-  .sidebar-box #searchform{
+  .sidebar-box .search-form{
     font-size: .825em
   }
 }
@@ -1215,8 +1209,24 @@ form#commentform,
   max-width: 1100px
 }
 
-.site-footer input[name="s"] {
-  width: 55%
+.search-form label{
+  width: 65%;
+}
+
+.site-footer .search-form label{
+  width: 55%;
+}
+
+.search-form input[type="search"]{
+  width: 100%;
+}
+
+.search-form, .search-form input[type="submit"]{
+  font-size: 15px;
+}
+
+.search-field ~ button {
+  padding: .3em .7em;
 }
 
 .comment-content {
@@ -1297,10 +1307,6 @@ form#commentform,
 
 .comment-list li .comment-body .reply:hover {
   color: #000
-}
-
-.search-form-wrap {
-  display: block
 }
 
 .search-form .form-group {
@@ -1463,10 +1469,6 @@ section[id*="recent-comments"] li {
   padding: 7px 0
 }
 
-#secondary section[id*="search"] h3 {
-  display: none
-}
-
 .fa-search::before {
   content: "\f002";
   color: rgb(108, 117, 125)
@@ -1537,12 +1539,6 @@ section[id*="recent-comments"] li {
 
 .site-footer ul>li a {
   font-size: .8em
-}
-
-@media screen and (min-width: 994px) {
-  .site-footer .search-form-wrap {
-    width: 70%
-  }
 }
 
 .footer-credits {

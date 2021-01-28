@@ -31,12 +31,13 @@
                         get_template_part( 'template-parts/post/content', 'excerpt' );
                     endwhile; // End of the loop.
                 else : ?>
+                    <article class="hentry">
                         <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'highstarter' ); ?>
                         </p>
                         <?php
-                        get_search_form();
-                endif;
-                ?>
+                        get_search_form(); ?>
+                    </article>
+                <?php endif; ?>
                     </div>
                 </div>
                 <!-- END of main-content -->
