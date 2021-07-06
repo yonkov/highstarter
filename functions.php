@@ -413,8 +413,10 @@ add_action( 'wp_head', 'highstarter_fb_open_graph' );
  * Adds no-sidebar class when sidebar is empty
  * @since 2.1.4
  */
-function highstarter_body_classes(){
-	$classes[] = 'no-sidebar';
+function highstarter_body_classes( $classes ){
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
+	}
 	return $classes;
 }
 add_filter( 'body_class', 'highstarter_body_classes' );
