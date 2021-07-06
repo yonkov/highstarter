@@ -100,7 +100,7 @@ function highstarter_styles() {
 	// Toggle Dark Theme Mode
 	wp_enqueue_script( 'highstarter-dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(), '', true );
 	// Theme stylesheet.
-	wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '2.1.3' );
+	wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '2.1.4' );
 }
 
 add_action( 'wp_enqueue_scripts', 'highstarter_styles', 99 );
@@ -408,3 +408,13 @@ function highstarter_fb_open_graph() {
 }
 
 add_action( 'wp_head', 'highstarter_fb_open_graph' );
+
+/**
+ * Adds no-sidebar class when sidebar is empty
+ * @since 2.1.4
+ */
+function highstarter_body_classes(){
+	$classes[] = 'no-sidebar';
+	return $classes;
+}
+add_filter( 'body_class', 'highstarter_body_classes' );

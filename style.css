@@ -7,7 +7,7 @@ Description: Highstarter is a lightweight starter theme without any libraries or
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.8
 Requires PHP: 5.2.4
-Version: 2.1.3
+Version: 2.1.4
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1463,10 +1463,15 @@ textarea.form-control {
   max-width: 42em;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px
+  padding-left: 15px;
 }
 
 /* Sidebar */
+
+.no-sidebar .main-content {
+  flex: 1;
+  max-width: none;
+}
 
 aside .wp-post-image, .default-image {
   width: 100px;

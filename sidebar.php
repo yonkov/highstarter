@@ -17,11 +17,4 @@ if (is_active_sidebar('sidebar-1')): ?>
     aria-label="<?php esc_attr_e('Main Sidebar', 'highstarter');?>">
     <?php dynamic_sidebar('sidebar-1');?>
 </aside><!-- #secondary -->
-<?php else: //Starter content in the right sidebar ?>
-<aside id="secondary" class="sidebar-wrapper sidebar widget-area>" role="complementary"
-    aria-label="<?php esc_attr_e('Main Sidebar', 'highstarter');?>">
-    <section id="search-form-2" class="sidebar-box">
-        <?php get_search_form();?>
-    </section>
-</aside><!-- #secondary -->
 <?php endif; // end primary widget area
