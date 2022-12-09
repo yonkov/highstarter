@@ -42,6 +42,8 @@ function highstarter_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	add_theme_support( 'align-wide' );
 }
 
 add_action( 'after_setup_theme', 'highstarter_setup' );
@@ -100,7 +102,7 @@ function highstarter_styles() {
 	// Toggle Dark Theme Mode
 	wp_enqueue_script( 'highstarter-dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(), '', true );
 	// Theme stylesheet.
-	wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '2.1.7' );
+	wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '2.1.8' );
 }
 
 add_action( 'wp_enqueue_scripts', 'highstarter_styles', 99 );

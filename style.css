@@ -5,9 +5,9 @@ Author: Atanas Yonkov
 Author URI: http://yonkov.github.io/
 Description: Highstarter is a lightweight starter theme without any libraries or frameworks, developed by Atanas Yonkov in 2020. The theme is very fast, simple, and easy to adapt to any design. This tiny WordPress theme (only 33KB zip file excluding the header image and the screenshot) uses core WordPress functions, custom css and vanilla js to provide high performance and the best possible user experience. It has extensive documentation and a lot of options in the theme customizer, which makes it accessible not only to WordPress developers but also to people with little or no coding experience at all. Option to pick between right sidebar, left sidebar or full-width layout. The visitors can choose between light and dark (night) mode and change their preferences with one click. Option to use a static Homepage. Option to add custom header image, custom header call to action button, custom site icon and change theme accent colors from the theme customizer. The theme also offers a lot of options to customize the header image. Add parallax, image overlay or change the height of the header image with a single click. The theme supports nested dropdown sub menus, pagination and even breadcrumbs out of the box. Fully compatible with Gutenberg but also supports the good old Classic editor. How to set it up: https://github.com/yonkov/highstarter/#readme
 Requires at least: WordPress 4.4
-Tested up to: WordPress 5.8
+Tested up to: WordPress 6.1
 Requires PHP: 5.2.4
-Version: 2.1.7
+Version: 2.1.8
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1142,6 +1142,10 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
   cursor: pointer;
   opacity: .9
+}
+
+button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"] {
+  background-color: #ff6663;
 }
 
 /* Sidebar */

@@ -22,7 +22,7 @@ function highstarter_customize_colors( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_background_color',
 		array(
-			'default'           => '#fff',
+			'default'           => '',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -81,7 +81,7 @@ function highstarter_customize_colors( $wp_customize ) {
 	$wp_customize->add_setting(
 		'button_color',
 		array(
-			'default'           => '#ff6663',
+			'default'           => '',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -112,7 +112,7 @@ body a {
 	color: <?php echo esc_attr( get_theme_mod( 'link_textcolor', '#007bff' ) ); ?>;
 }
 .site-header-wrapper {
-	background-color: <?php echo esc_attr( get_theme_mod( 'header_background_color', '#fff' ) ); ?>;
+	background-color: <?php echo esc_attr( get_theme_mod( 'header_background_color' ) ); ?>;
 }
 	<?php if ( $header_text_color ) : ?>
 .hero-text .site-title a,
@@ -127,7 +127,7 @@ a.button:visited,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: <?php echo esc_attr( get_theme_mod( 'button_color', '#ff6663' ) ); ?> !important;
+	background-color: <?php echo esc_attr( get_theme_mod( 'button_color' ) ); ?> !important;
 }
 </style>
 

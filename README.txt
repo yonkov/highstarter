@@ -2,10 +2,10 @@
 Contributors: nravota12
 Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
-Tested up to: WordPress 5.9
+Tested up to: WordPress 6.1
 Requires PHP: 5.2.4
-Version: 2.1.7
-Stable tag: 2.1.7
+Version: 2.1.8
+Stable tag: 2.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, left-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -29,7 +29,7 @@ You can read the Theme Instructions at https://github.com/yonkov/kickstarter in 
 
 == Copyright ==
 
-Highstarter WordPress Theme, Copyright 2020 Atanas Yonkov
+Highstarter WordPress Theme, Copyright 2020-2022 Atanas Yonkov
 Highstarter is distributed under the terms of the GNU GPLv2 or later
 
 This program is free software: you can redistribute it and/or modify
@@ -69,6 +69,9 @@ https://wordpress.org/themes/twentyseventeen/,
 License: GNU General Public License v2 or later
 
 == Changelog ==
+
+=2.1.8 =
+* Remove button default styles. Add support for align-wide and align-full
 
 =2.1.6 =
 *Fix mobile wrapper
