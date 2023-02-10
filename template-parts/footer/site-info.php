@@ -29,9 +29,10 @@
     <?php 
     $isDarkMode = get_theme_mod('enable_dark_mode', 1);
     if ($isDarkMode) : ?>
-    <button class="wpnm-button">
+    <button class="wpnm-button" id="dark-mode">
         <div class="wpnm-button-inner-left"></div>
         <div class="wpnm-button-inner"></div>
+        <label for="dark-mode" style="visibility:hidden; margin: 0px; line-height: 0px; outline:0; text-indent: -9999em;">Dark Mode</label>
     </button>
     <?php endif; ?>
 </div>
