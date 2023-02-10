@@ -101,6 +101,7 @@ blockquote {
     .main-navigation li.show>ul {
         left: auto
     }
+
     /* Keyboard navigation */
     .main-navigation ul ul li:hover>ul,
     .main-navigation ul ul li.focus>ul,
@@ -109,25 +110,6 @@ blockquote {
         right: 100%
     }
 }
-
-.main-navigation .menu-item-has-children > a::before {
-    position: relative;
-      content: "";
-      width: 0;
-      height: 0;
-      right: 4px;
-      top: 18px;
-      border-top: 4px solid #181818;
-      border-left: 4px solid rgba(0, 0, 0, 0);
-      border-right: 4px solid rgba(0, 0, 0, 0);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%)
-  }
-  
-  .main-navigation .menu-item-has-children > a::after{
-      display: none !important
-  }
 
 /* Mobile menu */
 
@@ -139,42 +121,45 @@ blockquote {
 /* Add arrows for menu items that has children menu items */
 
 .main-navigation .menu-item-has-children>a::after {
-    left: 4px;
-    right: 0
-  }
-  
-  .main-navigation .sub-menu .menu-item-has-children>a::after {
+    left: 0;
+    right: auto;
+}
+
+.main-navigation .sub-menu .menu-item-has-children>a::after {
     top: 50%;
     left: 10px;
     right: auto;
     border-right: 4px solid #181818;
     border-left: none
-  }
+}
 
-  /* Dark Mode */
+/* Dark Mode */
 
-  /* Wrapper */
+/* Wrapper */
 
 @media (min-width: 40.063em) {
     body.dark-mode .hentry {
-      padding: 1.5em 0 0 3.75em
+        padding: 1.5em 0 0 3.75em
     }
-    body.dark-mode #commentform, body.dark-mode .comment-body {
-      padding: 0 0rem 0 3rem
+
+    body.dark-mode #commentform,
+    body.dark-mode .comment-body {
+        padding: 0 0rem 0 3rem
     }
+
     .dark-mode .navigation.post-navigation {
         padding-left: 3.75em;
         padding-right: 0
     }
-  }
+}
 
-  body.dark-mode .main-navigation .sub-menu .menu-item-has-children > a::after {
+body.dark-mode .main-navigation .sub-menu .menu-item-has-children>a::after {
     border-right: 4px solid #fff;
     border-top: 4px solid transparent;
     border-left: 4px solid transparent
 }
 
-body.dark-mode .main-navigation .menu-item-has-children > a::before {
+body.dark-mode .main-navigation .menu-item-has-children>a::before {
     position: relative;
     content: "";
     width: 0;
@@ -187,38 +172,40 @@ body.dark-mode .main-navigation .menu-item-has-children > a::before {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%)
-  }
+}
 
-  /* Homepage */
+/* Homepage */
 
-  .post-title {
+.post-title {
     padding-right: 15px
-  }
+}
 
-  .site-footer section > ul, .site-footer section div > ul {
+.site-footer section>ul,
+.site-footer section div>ul {
     padding-right: 0em
-  }
+}
 
-  .comment-list li .vcard img {
+.comment-list li .vcard img {
     margin-left: 5px
-  }
+}
 
-  .comment-list .children {
+.comment-list .children {
     float: right;
     padding: 50px 40px 0 0px
-  }
-  
-  .comment-list li {
+}
+
+.comment-list li {
     float: right
-  }
+}
 
-  /* Headings */
-  .main-content h2, .main-content h1 {
+/* Headings */
+.main-content h2,
+.main-content h1 {
     text-align: right
-  }
+}
 
-  /* Footer */
+/* Footer */
 
-  .footer-meta {
+.footer-meta {
     margin-right: 15px;
 }
