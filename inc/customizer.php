@@ -462,6 +462,32 @@ function highstarter_night_mode_customizer( $wp_customize ) {
 			)
 		)
 	);
+
+	$wp_customize->add_setting(
+		'dark_mode_logo',
+		array(
+			'default'           => '', // Add Default Image URL
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'dark_mode_logo_control',
+			array(
+				'label'         => __( 'Upload Dark Mode Logo', 'highstarter' ),
+				'description' => __( 'Replace logo to match the dark theme.', 'highstarter' ),
+				'section'       => 'night_mode',
+				'settings'      => 'dark_mode_logo',
+				'button_labels' => array(//
+					'select' => 'Select Logo',
+					'remove' => 'Remove Logo',
+					'change' => 'Change Logo',
+				),
+			)
+		)
+	);
 }
 
 add_action( 'customize_register', 'highstarter_night_mode_customizer' );

@@ -7,7 +7,7 @@ Description: Highstarter is a lightweight starter theme without any libraries or
 Requires at least: WordPress 4.4
 Tested up to: WordPress 6.1
 Requires PHP: 5.2.4
-Version: 2.1.9
+Version: 2.2.2
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -532,6 +532,18 @@ body.dark-mode .main-navigation .sub-menu .menu-item-has-children > a::after {
 
 .dark-mode .sidebar-box .heading{
   border-bottom: 1px solid #666
+}
+
+.dark-mode-logo {
+  display: none;
+}
+
+.dark-mode .dark-mode-logo + .custom-logo-link {
+  display: none;
+}
+
+.dark-mode .dark-mode-logo {
+  display: block;
 }
 
 /* Dark Mode Switcher */

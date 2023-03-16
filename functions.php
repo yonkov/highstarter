@@ -102,7 +102,7 @@ function highstarter_styles() {
 	// Toggle Dark Theme Mode
 	wp_enqueue_script( 'highstarter-dark-mode', get_template_directory_uri() . '/assets/js/toggleDarkMode.js', array(), '', true );
 	// Theme stylesheet.
-	wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '2.1.9' );
+	wp_enqueue_style( 'highstarter-style', get_template_directory_uri() . '/style.css', '', '2.2.2' );
 }
 
 add_action( 'wp_enqueue_scripts', 'highstarter_styles', 99 );
@@ -215,6 +215,14 @@ function highstarter_the_custom_logo() {
 	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 		the_custom_logo();
 	}
+}
+
+function highstarter_dark_mode_logo() {
+	if ( get_theme_mod( 'dark_mode_logo' ) ) : ?>
+		<a class="custom-logo-link dark-mode-logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+			<img class="custom-logo" src="<?php echo esc_attr( get_theme_mod('dark_mode_logo') ); ?>" />
+		</a>
+	<?php endif;
 }
 
 if ( function_exists( 'get_parent_theme_file_path' ) ) { // Since WP 4.7

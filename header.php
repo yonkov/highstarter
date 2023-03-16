@@ -28,6 +28,7 @@
         <div class="site-header-wrapper">
             <div class="site-logo-wrapper">
             <?php // Insert logo through WP admin here
+               highstarter_dark_mode_logo();
                highstarter_the_custom_logo(); ?>
             </div>
             <div class="main-navigation-container">

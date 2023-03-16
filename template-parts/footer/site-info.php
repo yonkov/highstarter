@@ -29,7 +29,7 @@
     <?php 
     $isDarkMode = get_theme_mod('enable_dark_mode', 1);
     if ($isDarkMode) : ?>
-    <button class="wpnm-button">
+    <button aria-label="<?php _e('Click to toggle dark mode', 'highstarter')?>" class="wpnm-button">
         <div class="wpnm-button-inner-left"></div>
         <div class="wpnm-button-inner"></div>
     </button>
