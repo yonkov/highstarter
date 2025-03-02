@@ -22,7 +22,6 @@ function highstarter_customize_colors( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_background_color',
 		array(
-			'default'           => '',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -81,7 +80,6 @@ function highstarter_customize_colors( $wp_customize ) {
 	$wp_customize->add_setting(
 		'button_color',
 		array(
-			'default'           => '',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -100,7 +98,9 @@ function highstarter_customize_colors( $wp_customize ) {
 add_action( 'customize_register', 'highstarter_customize_colors' );
 
 function highstarter_customize_colors_css() {
-	$header_text_color = get_theme_mod( 'header_textcolor' ); ?>
+	$btn_bgr_color     = get_theme_mod( 'button_color' );
+	$header_text_color = get_header_textcolor();
+	$header_bgr_color  = get_theme_mod( 'header_background_color' ); ?>
 
 <style type="text/css">
 body h1,
@@ -111,27 +111,32 @@ body h3 {
 body a {
 	color: <?php echo esc_attr( get_theme_mod( 'link_textcolor', '#007bff' ) ); ?>;
 }
+<?php if ( $header_bgr_color ) : ?>
 .site-header-wrapper {
-	background-color: <?php echo esc_attr( get_theme_mod( 'header_background_color' ) ); ?>;
+	background-color: <?php echo esc_attr( $header_bgr_color ); ?>;
 }
-	<?php if ( $header_text_color ) : ?>
+<?php endif; ?>
+<?php if ( $header_text_color && $header_text_color !== 'blank' ) : ?>
 .hero-text .site-title a,
-header .site-description {
-	color: #<?php echo esc_attr( get_theme_mod( 'header_textcolor', 'fff' ) ); ?>;
+header .site-description,
+.no-header-image .site-title a,
+.no-header-image .site-description  {
+	color: #<?php echo esc_attr( $header_text_color ); ?>;
 }
-
-	<?php endif; ?>
+<?php endif; ?>
+<?php if ( $btn_bgr_color ) : ?>
 button,
 a.button,
 a.button:visited,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: <?php echo esc_attr( get_theme_mod( 'button_color' ) ); ?> !important;
+	background-color: <?php echo esc_attr( $btn_bgr_color ); ?>;
 }
+<?php endif; ?>
 </style>
 
-	<?php
+<?php
 }
 add_action( 'wp_head', 'highstarter_customize_colors_css' );
 
@@ -477,10 +482,10 @@ function highstarter_night_mode_customizer( $wp_customize ) {
 			'dark_mode_logo_control',
 			array(
 				'label'         => __( 'Upload Dark Mode Logo', 'highstarter' ),
-				'description' => __( 'Replace logo to match the dark theme.', 'highstarter' ),
+				'description'   => __( 'Replace logo to match the dark theme.', 'highstarter' ),
 				'section'       => 'night_mode',
 				'settings'      => 'dark_mode_logo',
-				'button_labels' => array(//
+				'button_labels' => array(
 					'select' => 'Select Logo',
 					'remove' => 'Remove Logo',
 					'change' => 'Change Logo',

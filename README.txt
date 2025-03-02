@@ -2,10 +2,10 @@
 Contributors: nravota12
 Author URI: http://yonkov.github.io/
 Requires at least: WordPress 4.4
-Tested up to: WordPress 6.1
+Tested up to: WordPress 6.7
 Requires PHP: 5.2.4
-Version: 2.2.2
-Stable tag: 2.2.2
+Version: 2.2.3
+Stable tag: 2.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio, blog, one-column, two-columns, right-sidebar, left-sidebar, custom-header, custom-menu, custom-colors, custom-logo, featured-images, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
@@ -69,6 +69,9 @@ https://wordpress.org/themes/twentyseventeen/,
 License: GNU General Public License v2 or later
 
 == Changelog ==
+
+=2.2.3 =
+* Improve theme customizer css output
 
 =2.2.2 =
 * Fix text domain
