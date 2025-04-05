@@ -19,8 +19,7 @@ register_default_headers(
 	array(
 		'default-image' => array(
 			'url'           => get_template_directory_uri() . '/assets/images/2500X750.jpg',
-			'thumbnail_url' => get_template_directory_uri() . '/assets/images/2500X750.jpg',
-			'description'   => __( 'Default Header Image', 'highstarter' ),
+			'thumbnail_url' => get_template_directory_uri() . '/assets/images/2500X750.jpg'
 		),
 	)
 );
